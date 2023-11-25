@@ -1,0 +1,28 @@
+.title {
+	font-size: clamp(4rem, 8vw, 8rem);
+	text-transform: uppercase;
+	letter-spacing: 2.2px;
+	text-shadow: 1px 3px 11px var(--text-shadow);
+}
+
+.home-wrapper {
+	min-height: 100vh;
+	width: 100%;
+	background-image: url("https://tamalsen.dev/wp-content/uploads/2021/07/tamalsen-home-cover.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.background-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	background-image: linear-gradient(180deg, #00000012 60%, #1a191d 100%);
+
+	opacity: 1;
+	transition: all 0.3s, border-radius 0.3s, opacity 0.3s;
+	z-index: 1;
+}

@@ -1,0 +1,100 @@
+.card {
+	border: 2px solid gray;
+	padding: 2rem 1.5rem;
+	min-width: 350px;
+}
+
+.title {
+	position: relative;
+}
+
+.title::after {
+	content: "";
+	position: absolute;
+	left: -1%;
+	bottom: 13.5%;
+	height: 0.3em;
+	width: 104%;
+	transition: all 0.1s ease-in-out;
+	z-index: -1;
+}
+
+.gradient-0.title::after {
+	background: linear-gradient(
+		65deg,
+		#df058d 0%,
+		#df058d 100%,
+		rgba(255, 209, 0, 0) 100%
+	);
+}
+.gradient-1.title::after {
+	background: linear-gradient(
+		65deg,
+		#2c49d8 0%,
+		#2c49d8 100%,
+		rgba(255, 209, 0, 0) 100%
+	);
+}
+.gradient-2.title::after {
+	background: linear-gradient(
+		65deg,
+		#ff6b2b 0%,
+		#ff6b2b 100%,
+		rgba(255, 209, 0, 0) 100%
+	);
+}
+.description {
+	padding-left: 35px;
+	font-size: 1.25rem;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+.desc-wrapper {
+	position: relative;
+}
+
+.desc-wrapper::before {
+	opacity: 0.3;
+	content: "";
+	width: 0;
+	height: 60%;
+	position: absolute;
+	background-color: white;
+	border: 0.2px solid white;
+	bottom: 20%;
+	left: 17px;
+}
+
+.description::after,
+.description::before {
+	opacity: 0.3;
+	display: block;
+	margin-left: -35px;
+}
+
+.description::before {
+	content: "<ul>";
+	margin-bottom: 5px;
+}
+
+.description::after {
+	content: "</ul>";
+	margin-top: 5px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+	.card {
+		flex: 1 1 50%;
+	}
+}
+@media (min-width: 768px) {
+	.card {
+		flex: 1 1 33.3%;
+	}
+}
+@media (min-width: 768px) {
+	.card {
+		flex: 1 1 25%;
+	}
+}

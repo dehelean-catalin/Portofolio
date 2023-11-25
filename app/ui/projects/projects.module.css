@@ -1,0 +1,9 @@
+.project-card svg:hover g > path {
+	transition: all 0.3s;
+	fill: var(--primary);
+}
+
+.project-card svg:hover > path {
+	transition: all 0.3s;
+	stroke: var(--primary);
+}

@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+
+	--primary: theme(colors.teal.300);
+	--secondary: theme(colors.slate.100);
+	--bg-color: rgba(26, 26, 26, 0.8);
+	--text-shadow: rgba(0, 0, 0, 0.3);
+	--text-lg: theme(fontSize.xl);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 19, 26, 37;
+		--background-end-rgb: 0, 0, 0;
+		--primary: theme(colors.teal.300);
+		--secondary: theme(colors.slate.100);
+		--text-lg: theme(fontSize.xl);
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: rgb(var(--foreground-rgb));
+	background-color: #1a191d;
+	letter-spacing: -1px;
+}
