@@ -36,9 +36,9 @@ export default function NavMenu() {
 			<ul className="tabs hidden m-auto font-mono md:flex">
 				{NAV_TABS.map((tab, key) => (
 					<li key={key} className="nav-tab">
-						<Link href="#" className="nav-link">
+						<Link href={`#${tab.name}`} className="nav-link">
 							<span className="relative before:content-['01'] before:absolute before:right-0 before:bottom-5 before:font-bold before:opacity-70">
-								{tab.symbol} {tab.name}
+								{`<>`} {tab.name}
 							</span>
 						</Link>
 					</li>

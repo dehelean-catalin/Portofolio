@@ -4,6 +4,7 @@
 	align-items: center;
 	padding: 1.75rem;
 	background-color: transparent;
+	z-index: 99;
 }
 
 .nav-menu ul {
