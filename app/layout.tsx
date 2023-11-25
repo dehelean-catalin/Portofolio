@@ -1,4 +1,5 @@
 import "@/app/ui/globals.css";
+import "@/app/ui/utils.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navigation from "./ui/nav-menu";

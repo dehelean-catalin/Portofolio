@@ -1,11 +1,8 @@
 export default function Contact() {
 	return (
-		<div id="contact" className="m-auto flex items-center flex-col py-12">
-			<h2 className="text-5xl my-12">Get in touch</h2>
-			<p
-				className="text-lg text-center text-gray-400 m-width-30"
-				style={{ maxWidth: "456px" }}
-			>
+		<div id="contact" className="m-auto flex items-center flex-col mb-20">
+			<h3 className="mb-14">Get in touch</h3>
+			<p className="text-center max-w-xl">
 				Open to new work opportunities and willing to help you with any
 				technical issues related to my expertise. My inbox is always open and I
 				will try to get back to you.

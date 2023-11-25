@@ -46,8 +46,6 @@
 .description {
 	padding-left: 35px;
 	font-size: 1.25rem;
-	-webkit-hyphens: auto;
-	hyphens: auto;
 }
 
 .desc-wrapper {

@@ -35,11 +35,9 @@ export default function NavMenu() {
 			<h1 className="uppercase text-2xl md:hidden lg:block">{`</>`} Catalin</h1>
 			<ul className="tabs hidden m-auto font-mono md:flex">
 				{NAV_TABS.map((tab, key) => (
-					<li key={key} className="nav-tab">
-						<Link href={`#${tab.name}`} className="nav-link">
-							<span className="relative before:content-['01'] before:absolute before:right-0 before:bottom-5 before:font-bold before:opacity-70">
-								{`<>`} {tab.name}
-							</span>
+					<li key={key} className={styles["nav-tab"]}>
+						<Link href={`#${tab.name}`} className={styles["nav-link"]}>
+							0{key + 1} {tab.name}
 						</Link>
 					</li>
 				))}

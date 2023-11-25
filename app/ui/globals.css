@@ -11,8 +11,12 @@
 
 	--primary: theme(colors.teal.300);
 	--secondary: theme(colors.slate.100);
+	--gray-400: theme(colors.gray.400);
+	--teal-900: theme(colors.teal.900);
+
 	--bg-color: rgba(26, 26, 26, 0.8);
 	--text-shadow: rgba(0, 0, 0, 0.3);
+
 	--text-lg: theme(fontSize.xl);
 }
 
@@ -21,9 +25,18 @@
 		--foreground-rgb: 255, 255, 255;
 		--background-start-rgb: 19, 26, 37;
 		--background-end-rgb: 0, 0, 0;
+
 		--primary: theme(colors.teal.300);
 		--secondary: theme(colors.slate.100);
+		--gray-400: theme(colors.gray.400);
+		--teal-900: theme(colors.teal.900);
+
+		--bg-color: rgba(26, 26, 26, 0.8);
+		--text-shadow: rgba(0, 0, 0, 0.3);
+
 		--text-lg: theme(fontSize.xl);
+		--text-xl: 30rem;
+		--text-2xl: 40rem;
 	}
 }
 
@@ -34,7 +47,40 @@
 }
 
 body {
-	color: rgb(var(--foreground-rgb));
+	color: rgb(226 232 240);
 	background-color: #1a191d;
 	letter-spacing: -1px;
+}
+
+h1 {
+	font-size: clamp(3.75rem, 10vw, 6rem);
+	font-weight: 700;
+	text-shadow: 1px 3px 11px var(--text-shadow);
+	text-align: center;
+	color: white;
+}
+
+h2 {
+	font-size: clamp(1.25rem, 5vw, 1.75rem);
+	text-shadow: 1px 3px 11px var(--text-shadow);
+	text-align: center;
+	word-spacing: 10px;
+	line-height: 2rem;
+}
+
+h3 {
+	font-size: clamp(2rem, 8vw, 3.5rem);
+	font-weight: 700;
+	text-shadow: 1px 3px 11px var(--text-shadow);
+	text-align: center;
+}
+
+h4 {
+	font-size: 2rem;
+	line-height: 2rem;
+}
+
+p {
+	font-size: 1.125rem;
+	color: var(--gray-400);
 }

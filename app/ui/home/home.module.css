@@ -1,16 +1,15 @@
-.title {
-	font-size: clamp(4rem, 8vw, 8rem);
-	text-transform: uppercase;
-	letter-spacing: 2.2px;
-	text-shadow: 1px 3px 11px var(--text-shadow);
-}
-
 .home-wrapper {
 	min-height: 100vh;
 	width: 100%;
 	background-image: url("https://tamalsen.dev/wp-content/uploads/2021/07/tamalsen-home-cover.jpg");
 	background-position: center center;
 	background-size: cover;
+}
+
+.title {
+	text-transform: uppercase;
+	letter-spacing: 2.2px;
+	text-shadow: 1px 3px 11px var(--text-shadow);
 }
 
 .background-overlay {
