@@ -1,6 +1,7 @@
 "use client";
 
-import clsx from "clsx";
+import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
+import LinkButton from "@/components/LinkButton/LinkButton";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { NAV_TABS } from "../lib/data";
@@ -23,16 +24,8 @@ export default function NavMenu() {
 	}, []);
 
 	return (
-		<nav
-			className={clsx(
-				{
-					"-sticky": hideOnScroll > 100,
-					"showed text-cyan-400": hideOnScroll > 400,
-				},
-				styles["nav-menu"]
-			)}
-		>
-			<h1 className="uppercase text-2xl md:hidden lg:block">{`</>`} Catalin</h1>
+		<nav className={styles["nav-menu"]}>
+			<h2 className="uppercase text-2xl md:hidden lg:block">{`</>`} Catalin</h2>
 			<ul className="tabs hidden m-auto font-mono md:flex">
 				{NAV_TABS.map((tab, key) => (
 					<li key={key} className={styles["nav-tab"]}>
@@ -42,6 +35,12 @@ export default function NavMenu() {
 					</li>
 				))}
 			</ul>
+
+			<div className="hidden md:block">
+				<LinkButton href={"/resume.pdf"} content="Resume" />
+			</div>
+
+			<BurgerMenu />
 		</nav>
 	);
 }

@@ -1,0 +1,56 @@
+.ham-btn {
+	position: relative;
+	display: inline-block;
+	width: var(--hum-menu-w);
+	height: var(--hum-menu-w);
+	cursor: pointer;
+	z-index: 10;
+}
+.ham-btn-inner {
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: var(--hum-menu-w);
+	height: var(--hum-menu-h);
+
+	border-radius: 4px;
+	background-color: white;
+
+	cursor: inherit;
+}
+.ham-btn-inner::before,
+.ham-btn-inner::after {
+	content: "";
+	position: absolute;
+	display: block;
+
+	width: var(--hum-menu-w);
+	height: var(--hum-menu-h);
+
+	border-radius: 4px;
+	background-color: white;
+	transition: all 0.15s;
+}
+.ham-btn-inner::before {
+	top: -10px;
+}
+.ham-btn-inner::after {
+	top: 10px;
+}
+
+.close .ham-btn-inner {
+	visibility: hidden;
+}
+
+.close .ham-btn-inner::before {
+	transform: rotate(225deg);
+	visibility: visible;
+	top: 0px;
+	transition: all 0.15s linear;
+}
+.close .ham-btn-inner::after {
+	transform: rotate(135deg);
+	visibility: visible;
+	top: 0px;
+	transition: all 0.15s linear;
+}

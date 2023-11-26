@@ -13,6 +13,7 @@
 	--secondary: theme(colors.slate.100);
 	--gray-400: theme(colors.gray.400);
 	--teal-900: theme(colors.teal.900);
+	--blue: rgba(30, 41, 59, 1);
 
 	--bg-color: rgba(26, 26, 26, 0.8);
 	--text-shadow: rgba(0, 0, 0, 0.3);
@@ -30,6 +31,7 @@
 		--secondary: theme(colors.slate.100);
 		--gray-400: theme(colors.gray.400);
 		--teal-900: theme(colors.teal.900);
+		--blue: rgba(30, 41, 59, 1);
 
 		--bg-color: rgba(26, 26, 26, 0.8);
 		--text-shadow: rgba(0, 0, 0, 0.3);
@@ -37,6 +39,9 @@
 		--text-lg: theme(fontSize.xl);
 		--text-xl: 30rem;
 		--text-2xl: 40rem;
+
+		--hum-menu-h: 3px;
+		--hum-menu-w: 28px;
 	}
 }
 
@@ -49,6 +54,7 @@
 body {
 	color: rgb(226 232 240);
 	background-color: #1a191d;
+	scroll-behavior: smooth;
 	letter-spacing: -1px;
 }
 

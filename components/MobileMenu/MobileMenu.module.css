@@ -1,0 +1,37 @@
+.mobile-menu {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	height: 100vh;
+	width: min(75vw, 400px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--blue);
+	opacity: 1;
+	box-shadow: -10px 0px 10px black;
+
+	transform: translateX(100vw);
+	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	visibility: hidden;
+	z-index: 5;
+}
+
+.open {
+	transform: translateX(0vw);
+	visibility: visible;
+	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.backdrop {
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1;
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+	filter: blur(120px);
+}

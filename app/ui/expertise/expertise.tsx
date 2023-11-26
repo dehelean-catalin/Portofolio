@@ -7,7 +7,6 @@ import styles from "./expertise.module.css";
 
 export default function Expertise() {
 	const scroll = useScrollInView();
-	console.log(window.scrollY);
 	return (
 		<div id="expertise" className="px-5 m-auto mb-20">
 			<h3 className="mb-14">What I do?</h3>

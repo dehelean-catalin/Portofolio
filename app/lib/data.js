@@ -28,19 +28,19 @@ export const EXPERTISE = [
 
 export const NAV_TABS = [
 	{
-		name: "home",
+		name: "Home",
 		symbol: "<>",
 	},
 	{
-		name: "expertise",
+		name: "Expertise",
 		symbol: "<>",
 	},
 	{
-		name: "projects",
+		name: "Projects",
 		symbol: "<>",
 	},
 	{
-		name: "experience",
+		name: "Experience",
 		symbol: "<>",
 	},
 	{
