@@ -11,12 +11,13 @@
 
 	background-color: var(--blue);
 	opacity: 1;
-	box-shadow: -10px 0px 10px black;
+	box-shadow: -10px 0px 20px -10px var(--gray-900);
 
 	transform: translateX(100vw);
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 	visibility: hidden;
 	z-index: 5;
+	counter-reset: section;
 }
 
 .open {
@@ -24,14 +25,16 @@
 	visibility: visible;
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.mobile-menu li {
+	text-align: center;
+	font-size: 1.25rem;
+}
+.mobile-menu li::before {
+	counter-increment: section;
+	content: "0" counter(section) " ";
 
-.backdrop {
-	top: 0;
-	left: 0;
-	position: fixed;
-	z-index: 1;
-	height: 100vh;
-	width: 100vw;
-	background-color: black;
-	filter: blur(120px);
+	display: block;
+	text-align: center;
+
+	font-size: 0.75em;
 }
