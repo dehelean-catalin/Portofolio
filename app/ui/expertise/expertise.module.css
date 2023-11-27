@@ -1,3 +1,8 @@
+.container {
+	opacity: 0;
+	transform: translateY(200px);
+}
+
 .card {
 	border: 2px solid gray;
 	padding: 2rem 1.5rem;
@@ -6,6 +11,22 @@
 
 .title {
 	position: relative;
+}
+
+@keyframes tit {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.appear {
+	animation-name: tit;
+	animation-duration: 0.8s;
 }
 
 .title::after {
