@@ -5,21 +5,28 @@
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 255, 255, 255;
+	--background-start-rgb: 19, 26, 37;
+	--background-end-rgb: 0, 0, 0;
 
 	--primary: theme(colors.teal.300);
-	--secondary: theme(colors.slate.100);
+	--teal-900: theme(colors.teal.900);
+	--text-primary: theme(colors.slate.200);
+
 	--gray-400: theme(colors.gray.400);
 	--gray-900: theme(colors.gray.900);
-	--teal-900: theme(colors.teal.900);
+
 	--blue: rgba(30, 41, 59, 1);
 
 	--bg-color: #1a191d;
 	--text-shadow: rgba(0, 0, 0, 0.3);
 
 	--text-lg: theme(fontSize.xl);
+	--text-xl: 30rem;
+	--text-2xl: 40rem;
+
+	--hum-menu-h: 3px;
+	--hum-menu-w: 28px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,10 +36,12 @@
 		--background-end-rgb: 0, 0, 0;
 
 		--primary: theme(colors.teal.300);
-		--secondary: theme(colors.slate.100);
+		--teal-900: theme(colors.teal.900);
+		--text-primary: theme(colors.slate.200);
+
 		--gray-400: theme(colors.gray.400);
 		--gray-900: theme(colors.gray.900);
-		--teal-900: theme(colors.teal.900);
+
 		--blue: rgba(30, 41, 59, 1);
 
 		--bg-color: #1a191d;
@@ -52,9 +61,11 @@
 	margin: 0;
 	padding: 0;
 }
+
 html {
 	scroll-behavior: smooth;
 }
+
 body {
 	color: rgb(226 232 240);
 	background-color: var(--bg-color);
@@ -73,42 +84,12 @@ body {
 	user-select: none;
 }
 
-.container {
-	opacity: 0;
-	visibility: hidden;
-	transform: translateY(20px);
-}
-.appear-header {
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0px);
-	transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),
-		opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-		transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-}
-.appear {
-	opacity: 1 !important;
-	visibility: visible !important;
-	transform: translateY(0px);
-	transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s,
-		opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s,
-		transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-}
-
-.appear:nth-child(even) {
-	transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-		opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-		transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-}
-
 h1 {
 	font-size: clamp(3.75rem, 10vw, 6rem);
 	font-weight: 700;
 	text-shadow: 1px 3px 11px var(--text-shadow);
 	text-align: center;
-	color: white;
+	color: var(--text-primary);
 }
 
 h2 {
@@ -117,6 +98,7 @@ h2 {
 	text-align: center;
 	word-spacing: 10px;
 	line-height: 2rem;
+	color: var(--text-primary);
 }
 
 h3 {
@@ -124,11 +106,13 @@ h3 {
 	font-weight: 700;
 	text-shadow: 1px 3px 11px var(--text-shadow);
 	text-align: center;
+	color: var(--text-primary);
 }
 
 h4 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 2rem;
+	color: var(--text-primary);
 }
 
 p {

@@ -26,11 +26,10 @@
 	font-size: 0.75em;
 }
 
-.tab-next::first-letter {
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: brown;
+.logo:focus-visible,
+.nav-link:focus-visible {
+	outline-offset: 2px;
+	outline: 2px solid var(--primary);
 }
 
 .tabs:hover .nav-link:not(:hover) {

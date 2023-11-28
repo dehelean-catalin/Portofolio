@@ -1,9 +1,15 @@
-.project-card svg:hover g > path {
-	transition: all 0.3s;
-	fill: var(--primary);
+.link {
+	transition: transform 0.3s;
 }
-
-.project-card svg:hover > path {
-	transition: all 0.3s;
-	stroke: var(--primary);
+.link:hover,
+.link:focus-visible {
+	transform: translateY(-3px);
+	transition: transform 0.3s 0.1s;
+}
+.link:focus-visible {
+	outline: none;
+}
+.link:hover path,
+.link:focus-visible path {
+	fill: var(--primary);
 }

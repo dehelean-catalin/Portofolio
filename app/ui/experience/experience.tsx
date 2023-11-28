@@ -1,5 +1,5 @@
 import { EXPERIENCES } from "@/app/lib/data";
-import Link from "next/link";
+import TextLink from "@/components/TextLink/TextLink";
 import Tab from "../tab";
 import styles from "./experience.module.css";
 
@@ -14,12 +14,11 @@ export default function Experience() {
 							{experience.period}
 						</span>
 						<div className="sm:col-start-3 sm:col-end-8">
-							<h4 className={`${styles.title} text-2xl`}>
-								<Link href={experience.companyURL} target="_blank">
-									{experience.title}
-									<span className={styles.company}>{experience.company}</span>
-								</Link>
-							</h4>
+							<TextLink href={experience.companyURL}>
+								<span>
+									{experience.title} | {experience.company}
+								</span>
+							</TextLink>
 
 							<ul className="mt-2 text-xl text-gray-400">
 								{experience.descriptions.map((desc, key) => (
@@ -30,9 +29,9 @@ export default function Experience() {
 							</ul>
 							<div className="mt-4">
 								{experience.projects.map((project, key) => (
-									<Link key={key} href={project.url} className={styles.project}>
-										{project.name}
-									</Link>
+									<TextLink key={key} href={project.url}>
+										<span className="text-xl">{project.name}</span>
+									</TextLink>
 								))}
 							</div>
 							<div className="flex flex-wrap gap-2 mt-4">

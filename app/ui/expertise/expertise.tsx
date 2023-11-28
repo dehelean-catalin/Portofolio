@@ -1,5 +1,3 @@
-"use client";
-
 import { EXPERTISE } from "@/app/lib/data";
 import Image from "next/image";
 import styles from "./expertise.module.css";

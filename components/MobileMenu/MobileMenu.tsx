@@ -23,6 +23,7 @@ export default function MobileMenu({
 		<aside
 			ref={menuRef}
 			className={clsx(styles["mobile-menu"], { [styles.open]: isOpen })}
+			tabIndex={isOpen ? 1 : -1}
 		>
 			<ul className="mb-4">
 				{NAV_TABS.map((tab, key) => (

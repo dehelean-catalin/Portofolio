@@ -6,6 +6,10 @@
 	cursor: pointer;
 	z-index: 10;
 }
+.ham-btn:focus-visible {
+	outline-offset: 2px;
+	outline: 2px var(--primary);
+}
 .ham-btn-inner {
 	position: absolute;
 	top: 50%;

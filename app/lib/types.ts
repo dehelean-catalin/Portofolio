@@ -3,7 +3,7 @@ export type Project = {
 	description: string;
 	imageURL: string;
 	githubURL: string;
-	demoURL: string;
-	projectURL: string;
+	demoURL: string | null;
+	projectURL: string | null;
 	skills: string[];
 };

@@ -1,32 +1,42 @@
-.footer a {
+.link {
+	color: var(--gray-400);
 	transition: all 0.3s;
 }
-.footer a:hover {
+.link:hover,
+.link:focus-visible {
 	transform: translateY(-3px);
 	transition: all 0.3s;
 }
+.link:focus-visible {
+	outline: none;
+}
 
-.footer g,
-.footer circle {
+.link g,
+.link circle {
 	fill: var(--gray-400);
 	transition: all 0.3s;
 }
 
-.footer g > path {
+.link g > path {
 	stroke: none !important;
 }
 
-.footer rect,
-.footer path {
+.link rect,
+.link path {
 	stroke: var(--gray-400);
 	transition: all 0.3s;
 }
 
-.footer a:hover g,
-.footer a:hover circle {
+.link:hover g,
+.link:hover circle,
+.link:focus-visible g,
+.link:focus-visible circle {
 	fill: var(--primary);
 }
-.footer a:hover rect,
-.footer a:hover path {
+
+.link:hover rect,
+.link:hover path,
+.link:focus-visible rect,
+.link:focus-visible path {
 	stroke: var(--primary);
 }

@@ -10,7 +10,7 @@ export default function AppFooter() {
 				<Link
 					href="https://www.linkedin.com/in/catalin-dehelean/"
 					target="_blank"
-					className="text-gray-400"
+					className={styles.link}
 					title="Linkedin Link"
 				>
 					<LinkedinSVG />
@@ -19,7 +19,7 @@ export default function AppFooter() {
 				<Link
 					href="https://github.com/dehelean-catalin"
 					target="_blank"
-					className="text-gray-400"
+					className={styles.link}
 					title="Github Link"
 				>
 					<GitHubSVG />
