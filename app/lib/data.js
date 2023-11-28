@@ -40,9 +40,18 @@ export const EXPERIENCES = [
 		company: "Betfair",
 		companyURL: "https://www.betfair.ro",
 		period: "Oct 2023 - Feb 2024",
-		descriptions: [],
+		descriptions: [
+			"A great experience that helped me improve my knowledge of computer science, browser engines and keep up with the latest updates of programming languages and frameworks",
+		],
 		projects: [],
-		skills: ["React", "Javascript", "Express Js", "Spring", "Java"],
+		skills: [
+			"Javascript",
+			"TypeScript",
+			"React",
+			"Express Js",
+			"Java",
+			"Spring",
+		],
 	},
 	{
 		title: "Frontend Developer",
@@ -106,7 +115,7 @@ export const PROJECTS = [
 	{
 		name: "Next Dashboard",
 		description:
-			"CouchAi's mission is to help people achieve their dream physique by providing a personalized fitness journey that can replace a personal trainer. I built this product using React-native and Redux, focusing on offline functionalities and Spring Boot with PostgreSQL on the backend.",
+			"An introductory Next Js and Tailwind css project to learn basic concepts like automatic routing, server side rendering, prefetching, etc...",
 		imageURL: "/projects/next_dashboard.png",
 		githubURL: "https://github.com/dehelean-catalin/NextJs-Dashboard",
 		demoURL: null,

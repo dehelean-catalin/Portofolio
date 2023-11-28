@@ -1,0 +1,32 @@
+.footer a {
+	transition: all 0.3s;
+}
+.footer a:hover {
+	transform: translateY(-3px);
+	transition: all 0.3s;
+}
+
+.footer g,
+.footer circle {
+	fill: var(--gray-400);
+	transition: all 0.3s;
+}
+
+.footer g > path {
+	stroke: none !important;
+}
+
+.footer rect,
+.footer path {
+	stroke: var(--gray-400);
+	transition: all 0.3s;
+}
+
+.footer a:hover g,
+.footer a:hover circle {
+	fill: var(--primary);
+}
+.footer a:hover rect,
+.footer a:hover path {
+	stroke: var(--primary);
+}

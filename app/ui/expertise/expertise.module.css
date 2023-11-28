@@ -8,22 +8,6 @@
 	position: relative;
 }
 
-@keyframes tit {
-	from {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.appear {
-	animation-name: tit;
-	animation-duration: 0.8s;
-}
-
 .title::after {
 	content: "";
 	position: absolute;
