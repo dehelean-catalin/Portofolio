@@ -1,12 +1,14 @@
 .nav-menu {
-	position: absolute;
+	position: sticky;
+	top: 0px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	padding: 1rem 1.75rem;
-	background-color: transparent;
-	z-index: 99;
+	background-color: var(--bg-color);
+	box-shadow: 0px 0px 5px 3px rgb(15, 15, 15);
+	z-index: 9;
 	counter-reset: section;
 }
 
@@ -15,7 +17,7 @@
 }
 
 .nav-link {
-	padding: 0.25rem min(16vw / 16, 1.5rem);
+	padding: 0.25rem 1.75rem;
 	transition: all 0.3s ease-in-out;
 }
 

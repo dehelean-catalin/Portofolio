@@ -7,32 +7,26 @@ export const EXPERTISE = [
 		title: "Software",
 		subtitle: "Development",
 		description:
-			"Experienced in both functional and OOP: Javascript, TypeScript and Java, Python",
+			"Experienced in both functional and OOP, including programming languages such as Javascript, TypeScript and Java.",
 		icon: computer,
 	},
 	{
 		title: "Full-Stack Dev",
 		subtitle: "React, Node Js",
 		description:
-			"Over 1 year of development experience in HTML, CSS, JS, React, NextJS, Node js, Spring Boot, Google Cloud and SQL.",
+			"Over one year of professional experience in building web applications leveraging React, Node JS, Next JS, and Spring.",
 		icon: javascript,
 	},
 	{
 		title: "Mobile Dev",
 		subtitle: "React Native",
 		description:
-			"Skilled in developing hybrid mobile apps and cross-platform solutions using the React Native framework.",
+			"Positioned about building cross-platform applications using React Native and Expo.",
 		icon: react,
 	},
 ];
 
-export const NAV_TABS = [
-	"home",
-	"expertise",
-	"projects",
-	"experience",
-	"contact",
-];
+export const NAV_TABS = ["expertise", "experience", "projects", "contact"];
 
 export const EXPERIENCES = [
 	{
@@ -121,7 +115,7 @@ export const PROJECTS = [
 		demoURL: null,
 		projectURL:
 			"https://next-js-dashboard-jm0gcfyem-dehelean-rares-catalins-projects.vercel.app/dashboard",
-		skills: ["Next Js", "Tailwind", "PostgreSQL"],
+		skills: ["Next Js", "Tailwind CSS", "PostgreSQL"],
 	},
 	{
 		name: "Digital Classroom",
