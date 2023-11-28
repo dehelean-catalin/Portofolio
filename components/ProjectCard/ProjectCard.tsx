@@ -26,10 +26,10 @@ export default function ProjectCard({
 		>
 			<Image
 				src={project.imageURL}
-				width={768}
-				height={768}
-				alt=""
-				className="object-contain aspect-video bg-gray-600"
+				width={854}
+				height={480}
+				alt="Project"
+				className="object-cover aspect-video bg-gray-600"
 			/>
 			<div>
 				<h5 className="text-xl">
