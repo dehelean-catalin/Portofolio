@@ -95,7 +95,7 @@ export const PROJECTS = [
 		name: "Smarald E-Learning App",
 		description:
 			"Users can monitor their progress and activity, manage content preferences, add reviews, share content, view security alerts, and authenticate with multiple providers. Developed a responsive web application using React Js, Redux, and PrimeReact. Integrated NLP models to transcribe and translate the video content.",
-		imageURL: "/projects/e_learning.png",
+		imageURL: "/projects/e_learning.webp",
 		githubURL:
 			"https://github.com/dehelean-catalin/react-express-e-learning-app",
 		demoURL: "https://www.youtube.com/watch?v=H7NIkVRMfHQ",
@@ -106,7 +106,7 @@ export const PROJECTS = [
 		name: "Couch AI",
 		description:
 			"CouchAi's mission is to help people achieve their dream physique by providing a personalized fitness journey that can replace a personal trainer. I built this product using React-native and Redux, focusing on offline functionalities and Spring Boot with PostgreSQL on the backend.",
-		imageURL: "/projects/couch_ai.png",
+		imageURL: "/projects/couch_ai.webp",
 		githubURL: "https://github.com/dehelean-catalin/CouchAi",
 		demoURL: null,
 		projectURL: null,
@@ -127,7 +127,7 @@ export const PROJECTS = [
 		name: "Digital Classroom",
 		description:
 			"Digital Classroom is a modern solution for the SINU platform with a focus on user experience and grade distribution.",
-		imageURL: "/projects/digital_classroom.png",
+		imageURL: "/projects/digital_classroom.webp",
 		githubURL: "https://github.com/dehelean-catalin/Digital_Classroom",
 		demoURL: null,
 		projectURL: null,

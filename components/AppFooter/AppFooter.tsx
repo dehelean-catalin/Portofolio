@@ -11,6 +11,7 @@ export default function AppFooter() {
 					href="https://www.linkedin.com/in/catalin-dehelean/"
 					target="_blank"
 					className="text-gray-400"
+					title="Linkedin Link"
 				>
 					<LinkedinSVG />
 				</Link>
@@ -19,6 +20,7 @@ export default function AppFooter() {
 					href="https://github.com/dehelean-catalin"
 					target="_blank"
 					className="text-gray-400"
+					title="Github Link"
 				>
 					<GitHubSVG />
 				</Link>

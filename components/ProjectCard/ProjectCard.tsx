@@ -29,7 +29,7 @@ export default function ProjectCard({
 				width={854}
 				height={480}
 				alt="Project"
-				className="object-cover aspect-video bg-gray-600"
+				className="object-cover rounded"
 			/>
 			<div>
 				<h5 className="text-xl">
