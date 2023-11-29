@@ -2,7 +2,7 @@ import LinkButton from "@/components/LinkButton/LinkButton";
 
 export default function Contact() {
 	return (
-		<div id="contact" className="m-auto flex items-center flex-col mb-20">
+		<div id="contact" className="m-auto flex items-center flex-col mb-24">
 			<h3 className="mb-14">Get in touch</h3>
 			<p className="text-center max-w-xl mb-10">
 				Open to new work opportunities and willing to help you with any

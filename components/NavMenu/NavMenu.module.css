@@ -1,23 +1,26 @@
 .nav-menu {
-	position: sticky;
+	position: fixed;
 	top: 0px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	padding: 1rem 1.75rem;
-	background-color: var(--bg-color);
-	box-shadow: 0px 0px 5px 3px rgb(15, 15, 15);
-	z-index: 9;
+	background-color: var(--blue);
+	box-shadow: 0px 10px 30px -10px rgb(15, 15, 15);
 	counter-reset: section;
+	z-index: 9;
+	transition: all 0.4s;
 }
 
 .tabs {
 	font-size: 1.25rem;
 }
+.tabs li {
+	padding: 0.25rem 1.25rem;
+}
 
 .nav-link {
-	padding: 0.25rem 1.75rem;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -37,4 +40,11 @@
 .tabs:hover .nav-link:not(:hover) {
 	opacity: 0.5;
 	transition: all 0.3s ease-in-out;
+}
+
+.down {
+	transform: translateY(-50px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s, opacity 0.3s;
 }
