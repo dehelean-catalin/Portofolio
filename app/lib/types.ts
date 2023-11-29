@@ -7,3 +7,18 @@ export type Project = {
 	projectURL: string | null;
 	skills: string[];
 };
+
+export type Experience = {
+	title: string;
+	company: string;
+	companyURL: string;
+	period: string;
+	descriptions: string[];
+	projects: ExperienceProject[];
+	skills: string[];
+};
+
+type ExperienceProject = {
+	name: string;
+	url: string;
+};

@@ -72,18 +72,6 @@ body {
 	letter-spacing: -1px;
 }
 
-.overflow-h {
-	overflow: hidden !important;
-}
-
-.blur {
-	filter: blur(5px) brightness(0.7);
-	transition: all 0.3s ease-in-out;
-	pointer-events: none;
-	-webkit-user-select: none;
-	user-select: none;
-}
-
 h1 {
 	font-size: clamp(3.75rem, 10vw, 6rem);
 	font-weight: 700;
@@ -93,7 +81,7 @@ h1 {
 }
 
 h2 {
-	font-size: clamp(1.25rem, 5vw, 1.75rem);
+	font-size: clamp(1.25rem, 5vw, 1.5rem);
 	text-shadow: 1px 3px 11px var(--text-shadow);
 	text-align: center;
 	word-spacing: 10px;

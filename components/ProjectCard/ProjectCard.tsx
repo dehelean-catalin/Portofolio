@@ -1,14 +1,32 @@
 import { Project } from "@/app/lib/types";
 import GitHubSVG from "@/app/ui/githubSVG";
 import Tab from "@/app/ui/tab";
+import clsx from "clsx";
+import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import TextLink from "../TextLink/TextLink";
 import styles from "./ProjectCard.module.css";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({
+	project,
+	index,
+}: {
+	project: Project;
+	index: number;
+}) {
+	const cardRef = useRef(null);
+	const inView = useInView(cardRef, { once: true, amount: 0.2 });
+
 	return (
-		<article className={`${styles.card} card flex flex-col gap-4`}>
+		<article
+			ref={cardRef}
+			className={clsx(`card flex flex-col gap-4 tr-delay-${index % 2} `, {
+				after: inView,
+				initial: !inView,
+			})}
+		>
 			<Image
 				src={project.imageURL}
 				width={854}

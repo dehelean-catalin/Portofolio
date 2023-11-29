@@ -4,6 +4,31 @@
 	min-width: 350px;
 }
 
+.hidden article {
+	opacity: 0;
+	transform: translateY(15px);
+}
+.show h3 {
+	opacity: 1;
+	transform: translate(0px);
+	transition: all 0.2s 0.1s;
+}
+
+.show article {
+	opacity: 1;
+	transform: translate(0px);
+}
+
+.show article:first-child {
+	transition: all 0.3s linear 0.2s;
+}
+.show article:nth-child(2) {
+	transition: all 0.3s linear 0.35s;
+}
+.show article:last-child {
+	transition: all 0.3s linear 0.5s;
+}
+
 .title {
 	position: relative;
 }

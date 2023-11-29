@@ -9,7 +9,6 @@
 .title {
 	text-transform: uppercase;
 	letter-spacing: 2.2px;
-	text-shadow: 1px 3px 11px var(--text-shadow);
 }
 
 .background-overlay {

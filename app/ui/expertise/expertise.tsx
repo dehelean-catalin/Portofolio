@@ -1,10 +1,25 @@
+"use client";
+
 import { EXPERTISE } from "@/app/lib/data";
+import clsx from "clsx";
+import { useInView } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 import styles from "./expertise.module.css";
 
 export default function Expertise() {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true, amount: 0.2 });
+
 	return (
-		<div id="expertise" className={`px-5 m-auto mb-20`}>
+		<div
+			id="expertise"
+			ref={ref}
+			className={clsx("px-5 m-auto mb-20", {
+				[styles.show]: isInView,
+				[styles.hidden]: !isInView,
+			})}
+		>
 			<h3 className="mb-14">What I do?</h3>
 			<div className="flex flex-wrap gap-10 m-auto md:gap-0">
 				{EXPERTISE.map((item, key) => (

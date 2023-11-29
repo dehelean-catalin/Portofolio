@@ -1,5 +1,6 @@
 import AppFooter from "@/components/AppFooter/AppFooter";
 import Cursor from "@/components/Cursor/Cursor";
+import NavMenu from "@/components/NavMenu/NavMenu";
 import Contact from "./ui/contact/contact";
 import Experience from "./ui/experience/experience";
 import Expertise from "./ui/expertise/expertise";
@@ -9,6 +10,7 @@ import Projects from "./ui/projects/projects";
 export default function HomePage() {
 	return (
 		<>
+			<NavMenu />
 			<main className="min-h-screen">
 				<Home />
 				<div className="flex flex-col gap-12 px-5">

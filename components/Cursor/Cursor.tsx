@@ -22,5 +22,6 @@ export default function Cursor() {
 			document.removeEventListener("mousemove", handleMouseMove);
 		};
 	}, []);
+
 	return <circle className={styles.cursor} data-cursor></circle>;
 }
