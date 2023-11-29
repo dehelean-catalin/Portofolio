@@ -1,4 +1,5 @@
 import AppFooter from "@/components/AppFooter/AppFooter";
+import Cursor from "@/components/Cursor/Cursor";
 import Contact from "./ui/contact/contact";
 import Experience from "./ui/experience/experience";
 import Expertise from "./ui/expertise/expertise";
@@ -18,6 +19,7 @@ export default function HomePage() {
 				</div>
 			</main>
 			<AppFooter />
+			<Cursor />
 		</>
 	);
 }
