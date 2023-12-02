@@ -31,7 +31,7 @@ export default function NavMenu() {
 				<LogoSVG />
 			</Link>
 			<ul
-				className={clsx(`${styles.tabs} hidden m-auto font-mono md:flex`, {
+				className={clsx(`${styles.tabs} hidden font-mono md:flex`, {
 					"initial-tab delay-100": !inView,
 					"after delay-100": inView,
 				})}

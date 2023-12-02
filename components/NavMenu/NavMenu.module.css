@@ -17,7 +17,7 @@
 	font-size: 1.25rem;
 }
 .tabs li {
-	padding: 0.25rem 1.25rem;
+	padding: 0rem 1.25rem;
 }
 
 .nav-link {
@@ -36,8 +36,10 @@
 	outline-offset: 2px;
 	outline: 2px solid var(--primary);
 }
-
-.tabs:hover .nav-link:not(:hover) {
+.tabs li {
+	transition: all 0.3s ease-in-out;
+}
+.tabs:hover li:not(:hover) {
 	opacity: 0.5;
 	transition: all 0.3s ease-in-out;
 }

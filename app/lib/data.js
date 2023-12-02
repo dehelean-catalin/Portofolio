@@ -88,7 +88,7 @@ export const PROJECTS = [
 	{
 		name: "Smarald E-Learning App",
 		description:
-			"Users can monitor their progress and activity, manage content preferences, add reviews, share content, view security alerts, and authenticate with multiple providers. Developed a responsive web application using React Js, Redux, and PrimeReact. Integrated NLP models to transcribe and translate the video content.",
+			"A video-based platform that facilitates collaboration between teachers and students through features such as course sharing, activity monitoring, caption generation using NLP models, statistics generation, and multi-vendor authentication.",
 		imageURL: "/projects/e_learning.webp",
 		githubURL:
 			"https://github.com/dehelean-catalin/react-express-e-learning-app",

@@ -1,5 +1,4 @@
 import AppFooter from "@/components/AppFooter/AppFooter";
-import Cursor from "@/components/Cursor/Cursor";
 import NavMenu from "@/components/NavMenu/NavMenu";
 import Contact from "./ui/contact/contact";
 import Experience from "./ui/experience/experience";
@@ -8,6 +7,7 @@ import Home from "./ui/home/home";
 import Projects from "./ui/projects/projects";
 
 export default function HomePage() {
+	console.log("render");
 	return (
 		<>
 			<NavMenu />
@@ -21,7 +21,7 @@ export default function HomePage() {
 				</div>
 			</main>
 			<AppFooter />
-			<Cursor />
+			{/* <Cursor /> */}
 		</>
 	);
 }
