@@ -13,8 +13,15 @@ export default function TextLink({
 	children: ReactNode;
 }) {
 	return (
-		<h4 className={styles.title}>
-			<Link href={href} className={styles.link} target="_blank" title={title}>
+		<h4>
+			<Link
+				href={href}
+				className={styles.link}
+				target="_blank"
+				title={title}
+				rel="noreferrer"
+			>
+				<span className="absolute -inset-x-0 -inset-y-0 rounded w-full h-full"></span>
 				{children}
 				<LinkSVG />
 			</Link>

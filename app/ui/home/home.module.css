@@ -14,7 +14,7 @@
 
 .background-overlay {
 	position: absolute;
-	top: 80px;
+	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;

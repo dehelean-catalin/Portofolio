@@ -1,14 +1,13 @@
 .card {
 	padding: 1.25rem;
 	border-radius: 8px;
-	transition: all 0.3s;
-	background-color: rgba(30, 41, 59, 0.5);
-	box-shadow: 1px 1px 5px 1px rgb(19, 19, 19);
+	position: relative;
 }
 
 .card:hover {
+	background-color: var(--bg-card);
 	box-shadow: 1px 1px 8px 3px rgb(19, 19, 19);
-	transition: all 0.3s linear;
+	transform: translateY(-5px);
 }
 
 .overflow-h {

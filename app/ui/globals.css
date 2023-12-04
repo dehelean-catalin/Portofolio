@@ -23,6 +23,7 @@
 
 	--bg-color: #1a191d;
 	--text-shadow: rgba(0, 0, 0, 0.3);
+	--bg-card: #201f23;
 
 	--text-lg: theme(fontSize.xl);
 	--text-xl: 30rem;
@@ -49,6 +50,7 @@
 
 		--bg-color: #1a191d;
 		--text-shadow: rgba(0, 0, 0, 0.3);
+		--bg-card: #201f23;
 
 		--text-lg: theme(fontSize.xl);
 		--text-xl: 30rem;
