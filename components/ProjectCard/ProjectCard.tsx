@@ -1,12 +1,12 @@
 import { Project } from "@/app/lib/types";
-import GitHubSVG from "@/app/ui/githubSVG";
-import Tab from "@/app/ui/tab";
+import Tab from "@/components/Tab/Tab";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import TextLink from "../TextLink/TextLink";
+import GitHubSVG from "../GithubSVG/GithubSVG";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({

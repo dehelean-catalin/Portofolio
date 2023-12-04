@@ -1,7 +1,7 @@
 "use client";
 
 import { Experience } from "@/app/lib/types";
-import Tab from "@/app/ui/tab";
+import Tab from "@/components/Tab/Tab";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
 import { useRef } from "react";

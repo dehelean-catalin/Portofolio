@@ -1,10 +1,13 @@
+.close {
+	position: relative;
+	z-index: 10;
+}
 .ham-btn {
 	position: relative;
 	display: inline-block;
 	width: var(--hum-menu-w);
 	height: var(--hum-menu-w);
 	cursor: pointer;
-	z-index: 10;
 }
 .ham-btn:focus-visible {
 	outline-offset: 2px;
@@ -27,7 +30,6 @@
 	content: "";
 	position: absolute;
 	display: block;
-
 	width: var(--hum-menu-w);
 	height: var(--hum-menu-h);
 
@@ -57,4 +59,10 @@
 	visibility: visible;
 	top: 0px;
 	transition: all 0.15s linear;
+}
+
+.close:focus-visible,
+.menu:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
 }

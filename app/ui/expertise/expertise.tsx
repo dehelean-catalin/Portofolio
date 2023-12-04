@@ -11,15 +11,13 @@ export default function Expertise() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
 
+	const sectionClassName = clsx("m-auto mb-20", {
+		[styles.show]: isInView,
+		[styles.hidden]: !isInView,
+	});
+
 	return (
-		<div
-			id="expertise"
-			ref={ref}
-			className={clsx("px-5 m-auto mb-20", {
-				[styles.show]: isInView,
-				[styles.hidden]: !isInView,
-			})}
-		>
+		<div id="expertise" ref={ref} className={sectionClassName}>
 			<h3 className="mb-14">What I do?</h3>
 			<div className="flex flex-wrap gap-10 m-auto md:gap-0">
 				{EXPERTISE.map((item, key) => (

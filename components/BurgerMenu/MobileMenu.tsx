@@ -15,13 +15,14 @@ export default function MobileMenu({
 	isOpen: boolean;
 	onTabPress: () => void;
 }) {
-	const menuRef = useRef<HTMLElement>(null);
+	const sidebarRef = useRef<HTMLElement>(null);
 
-	useOnClickOutside(menuRef, onTabPress);
+	useOnClickOutside(sidebarRef, onTabPress);
 
 	return (
 		<aside
-			ref={menuRef}
+			id="side-bar"
+			ref={sidebarRef}
 			className={clsx(styles["mobile-menu"], { [styles.open]: isOpen })}
 			tabIndex={isOpen ? 1 : -1}
 		>

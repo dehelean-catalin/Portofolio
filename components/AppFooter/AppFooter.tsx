@@ -1,7 +1,7 @@
-import GitHubSVG from "@/app/ui/githubSVG";
-import LinkedinSVG from "@/app/ui/linkedinSVG";
 import Link from "next/link";
+import GitHubSVG from "../GithubSVG/GithubSVG";
 import styles from "./AppFooter.module.css";
+import LinkedinSVG from "./LinkedinSVG";
 
 export default function AppFooter() {
 	return (
