@@ -2,22 +2,38 @@
 	max-width: 768px;
 }
 
+.desc {
+	color: var(--text-secondary);
+}
+
 .link {
+	position: relative;
+
 	font-size: var(--text-lg);
-	transition: all 0.3s;
+
+	transform: translateY(0px);
+	transition: var(--primary-transition);
+
+	z-index: 3;
 }
+
+.link svg {
+	display: inline;
+	margin-right: 0.25rem;
+}
+
+.link path {
+	fill: var(--text-primary);
+	transition: var(--primary-transition);
+}
+
 .link:hover {
-	color: var(--primary);
-	transform: scale(2);
-	transition: all 0.3s;
+	color: var(--btn-primary-color);
+	transform: translateY(-3px);
+	transition: var(--primary-transition);
 }
-.link::before {
-	content: "";
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	margin-right: 0.5rem;
-	background-position: center center;
-	background-size: cover;
-	background-image: url("/chain.svg");
+
+.link:hover path {
+	fill: var(--btn-primary-color);
+	transition: var(--primary-transition);
 }

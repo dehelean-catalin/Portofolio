@@ -1,15 +1,28 @@
 .link {
-	transition: transform 0.3s;
+	position: relative;
+
+	transform: translateY(0px);
+	transition: var(--primary-transition);
+
+	z-index: 3;
 }
+
 .link:hover,
 .link:focus-visible {
 	transform: translateY(-3px);
-	transition: transform 0.3s 0.1s;
+	transition: var(--primary-transition);
 }
+
 .link:focus-visible {
 	outline: none;
 }
+
+.link path {
+	fill: var(--text-primary);
+	transition: var(--primary-transition);
+}
 .link:hover path,
 .link:focus-visible path {
-	fill: var(--primary);
+	fill: var(--btn-primary-color);
+	transition: var(--primary-transition);
 }

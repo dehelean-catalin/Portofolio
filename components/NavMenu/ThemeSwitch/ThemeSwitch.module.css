@@ -1,0 +1,63 @@
+.switch-theme {
+	--width: 60px;
+	--height: 32px;
+
+	position: relative;
+
+	width: var(--width);
+	height: var(--height);
+
+	background: var(--text-primary);
+	border-radius: 20px;
+
+	cursor: pointer;
+}
+.btn {
+	width: 0px;
+	height: 0px;
+
+	opacity: 0;
+}
+
+.switch-theme svg {
+	position: absolute;
+	z-index: 1;
+}
+
+.switch-theme svg:nth-child(3) {
+	top: 6px;
+	right: 6px;
+}
+.switch-theme svg:nth-child(4) {
+	top: 6px;
+	left: 6px;
+}
+
+.switch-theme svg path {
+	stroke: var(--secondary-background);
+}
+
+.slider {
+	position: absolute;
+	left: 3px;
+	top: 3px;
+
+	height: 26px;
+	width: 26px;
+
+	display: inline-block;
+
+	background-color: var(--secondary-background);
+	border-radius: 50%;
+
+	cursor: pointer;
+	transform: translateX(0px);
+	transition: var(--primary-transition);
+
+	z-index: 2;
+}
+
+.btn:checked + .slider {
+	transform: translateX(27px);
+	transition: var(--primary-transition);
+}

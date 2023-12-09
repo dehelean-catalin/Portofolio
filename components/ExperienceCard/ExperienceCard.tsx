@@ -4,8 +4,10 @@ import { Experience } from "@/app/lib/types";
 import Tab from "@/components/Tab/Tab";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 import TextLink from "../TextLink/TextLink";
+import ChainSVG from "./ChainSVG";
 import styles from "./ExperienceCard.module.css";
 
 export default function ExperienceCard({
@@ -24,7 +26,9 @@ export default function ExperienceCard({
 			})}
 		>
 			<div className="grid gap-x-2 sm:grid-cols-7">
-				<span className="flex-1 mt-1 text-gray-400 uppercase sm:col-start-1 sm:col-end-3 mb-4">
+				<span
+					className={`${styles.desc} flex-1 mt-1 uppercase sm:col-start-1 sm:col-end-3 mb-4`}
+				>
 					{experience.period}
 				</span>
 				<div className="sm:col-start-3 sm:col-end-8">
@@ -34,7 +38,7 @@ export default function ExperienceCard({
 						</span>
 					</TextLink>
 
-					<ul className="mt-2 text-xl text-gray-400">
+					<ul className={`${styles.desc} mt-2 text-xl`}>
 						{experience.descriptions.map((desc, key) => (
 							<li key={key} className="mt-2 before:text-teal-300">
 								{desc}
@@ -43,9 +47,15 @@ export default function ExperienceCard({
 					</ul>
 					<div className="mt-4">
 						{experience.projects.map((project, key) => (
-							<TextLink key={key} href={project.url}>
+							<Link
+								key={key}
+								href={project.url}
+								className={styles.link}
+								target="_blank"
+							>
+								<ChainSVG />
 								<span className="text-xl">{project.name}</span>
-							</TextLink>
+							</Link>
 						))}
 					</div>
 					<div className="flex flex-wrap gap-2 mt-4">

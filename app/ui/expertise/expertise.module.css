@@ -1,7 +1,13 @@
 .card {
-	border: 2px solid gray;
+	border: 2px solid var(--secondary-background);
 	padding: 2rem 1.5rem;
 	min-width: 350px;
+}
+
+.card svg,
+.card g,
+.card path {
+	fill: var(--text-primary);
 }
 
 .hidden article {
@@ -11,7 +17,7 @@
 .show h3 {
 	opacity: 1;
 	transform: translate(0px);
-	transition: all 0.2s 0.1s;
+	transition: var(--primary-transition);
 }
 
 .show article {
@@ -83,8 +89,8 @@
 	width: 0;
 	height: 60%;
 	position: absolute;
-	background-color: white;
-	border: 0.2px solid white;
+	background-color: var(--text-secondary);
+	border: 0.2px solid var(--text-secondary);
 	bottom: 20%;
 	left: 17px;
 }
@@ -94,6 +100,8 @@
 	opacity: 0.3;
 	display: block;
 	margin-left: -35px;
+
+	color: var(--text-secondary);
 }
 
 .description::before {

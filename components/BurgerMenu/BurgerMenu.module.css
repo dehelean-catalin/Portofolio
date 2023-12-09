@@ -3,22 +3,26 @@
 	z-index: 10;
 }
 .ham-btn {
+	--width: 28px;
+	--height: 3px;
 	position: relative;
 	display: inline-block;
-	width: var(--hum-menu-w);
-	height: var(--hum-menu-w);
+	width: var(--width);
+	height: var(--width);
 	cursor: pointer;
 }
 .ham-btn:focus-visible {
 	outline-offset: 2px;
-	outline: 2px var(--primary);
+	outline: 2px var(--btn-primary-color);
 }
 .ham-btn-inner {
+	--width: 28px;
+	--height: 3px;
 	position: absolute;
 	top: 50%;
 	display: block;
-	width: var(--hum-menu-w);
-	height: var(--hum-menu-h);
+	width: var(--width);
+	height: var(--height);
 
 	border-radius: 4px;
 	background-color: white;
@@ -27,11 +31,13 @@
 }
 .ham-btn-inner::before,
 .ham-btn-inner::after {
+	--width: 28px;
+	--height: 3px;
 	content: "";
 	position: absolute;
 	display: block;
-	width: var(--hum-menu-w);
-	height: var(--hum-menu-h);
+	width: var(--width);
+	height: var(--height);
 
 	border-radius: 4px;
 	background-color: white;
@@ -63,6 +69,6 @@
 
 .close:focus-visible,
 .menu:focus-visible {
-	outline: 2px solid var(--primary);
+	outline: 2px solid var(--btn-primary-color);
 	outline-offset: 2px;
 }

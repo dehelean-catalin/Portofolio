@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "./LinkButton.module.css";
 
 export default function LinkButton({
 	href,
@@ -16,9 +15,7 @@ export default function LinkButton({
 		<Link
 			href={href}
 			target={target}
-			className={`${styles["link-btn"]} ${
-				className ?? ""
-			} py-2 px-3 border border-teal-300 rounded`}
+			className={`btn btn-primary ${className ?? ""}`}
 		>
 			{content}
 		</Link>

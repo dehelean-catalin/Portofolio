@@ -1,11 +1,11 @@
 .link {
-	color: var(--gray-400);
-	transition: all 0.3s;
+	color: var(--text-secondary);
+	transition: var(--primary-transition);
 }
 .link:hover,
 .link:focus-visible {
 	transform: translateY(-3px);
-	transition: all 0.3s;
+	transition: var(--primary-transition);
 }
 .link:focus-visible {
 	outline: none;
@@ -13,8 +13,8 @@
 
 .link g,
 .link circle {
-	fill: var(--gray-400);
-	transition: all 0.3s;
+	fill: var(--text-secondary);
+	transition: var(--primary-transition);
 }
 
 .link g > path {
@@ -23,20 +23,20 @@
 
 .link rect,
 .link path {
-	stroke: var(--gray-400);
-	transition: all 0.3s;
+	stroke: var(--text-secondary);
+	transition: var(--primary-transition);
 }
 
 .link:hover g,
 .link:hover circle,
 .link:focus-visible g,
 .link:focus-visible circle {
-	fill: var(--primary);
+	fill: var(--btn-primary-color);
 }
 
 .link:hover rect,
 .link:hover path,
 .link:focus-visible rect,
 .link:focus-visible path {
-	stroke: var(--primary);
+	stroke: var(--btn-primary-color);
 }

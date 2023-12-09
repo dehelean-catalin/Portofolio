@@ -6,7 +6,7 @@
 	width: 25px;
 	height: 25px;
 	background: transparent;
-	border: 1px solid var(--primary);
+	border: 1px solid var(--btn-primary-color);
 	border-radius: 50%;
 	pointer-events: none;
 	transition: all 0.1s ease-out;

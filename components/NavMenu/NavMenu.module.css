@@ -6,13 +6,18 @@
 	justify-content: space-between;
 	width: 100%;
 	padding: 1rem 1.75rem;
-	background-color: var(--bg-card);
+	background-color: var(--menu-background);
 	box-shadow: 0px 10px 30px -10px rgb(15, 15, 15);
 	counter-reset: section;
 	transition: all 0.4s;
 	transform: translateY(0px);
 	z-index: 2;
 }
+
+.start-menu {
+	background-color: var(--secondary-background);
+}
+
 .down {
 	transform: translateY(-50px);
 	opacity: 0;
@@ -29,14 +34,14 @@
 	width: 1px;
 	height: 1px;
 	left: -100px;
-	background-color: var(--primary);
-	color: var(--blue);
+	background-color: var(--btn-primary-color);
+	color: var(--menu-background);
 	overflow: hidden;
 	z-index: 3;
 }
 .skip-content:focus-visible {
 	box-shadow: 4px 4px 0 0 var(--green);
-	transition: all 0.3s linear;
+	transition: var(--primary-transition);
 	left: 0px;
 	width: auto;
 	height: auto;
@@ -45,29 +50,32 @@
 	font-size: 1.25rem;
 }
 .tabs li {
-	padding: 0rem 1.25rem;
+	padding: 0rem min(1.25rem, 1vw);
 }
 
 .nav-link {
-	transition: all 0.3s ease-in-out;
+	transition: var(--primary-transition);
 }
 
 .nav-link::before {
 	counter-increment: section;
 	content: "0" counter(section) " ";
-	color: var(--primary);
+
+	color: var(--btn-primary-color);
 	font-size: 0.75em;
 }
-
+.logo path {
+	fill: var(--btn-primary-color);
+}
 .logo:focus-visible,
 .nav-link:focus-visible {
 	outline-offset: 2px;
-	outline: 2px solid var(--primary);
+	outline: 2px solid var(--btn-primary-color);
 }
 .tabs li {
-	transition: all 0.3s ease-in-out;
+	transition: var(--primary-transition);
 }
 .tabs:hover li:not(:hover) {
 	opacity: 0.5;
-	transition: all 0.3s ease-in-out;
+	transition: var(--primary-transition);
 }

@@ -1,18 +1,22 @@
 .mobile-menu {
+	--box-sh: -10px 0px 20px -10px var(--bs-primary);
+
 	position: fixed;
 	right: 0px;
 	top: 0px;
+
 	height: 100vh;
 	width: min(75vw, 400px);
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
-	background-color: var(--blue);
-	opacity: 1;
-	box-shadow: -10px 0px 20px -10px var(--gray-900);
+	background-color: var(--menu-background);
+	box-shadow: var(--box-sh);
 
+	opacity: 1;
 	transform: translateX(100vw);
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 	visibility: hidden;
@@ -39,5 +43,5 @@
 }
 .mobile-menu a:focus-visible {
 	outline-offset: 2px;
-	outline: 2px solid var(--primary);
+	outline: 2px solid var(--btn-primary-color);
 }

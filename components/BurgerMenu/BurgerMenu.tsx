@@ -2,7 +2,7 @@
 
 import { useHamburgerMenu } from "@/hooks/useHamburgerMenu";
 import clsx from "clsx";
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import styles from "./BurgerMenu.module.css";
 import MobileMenu from "./MobileMenu";
 
@@ -11,34 +11,10 @@ export default function BurgerMenu() {
 	const menuRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		const handleKeyDown = (e: KeyboardEvent) => {
-			if (e.key === "Tab") {
-				const focusableElements = menuRef.current?.querySelectorAll(
-					"a, button, input, textarea, select"
-				);
-
-				if (!focusableElements) return;
-				if (focusableElements.length < 2) return;
-
-				const firstElement = focusableElements[0] as HTMLElement;
-				const lastElement = focusableElements[
-					focusableElements.length - 1
-				] as HTMLElement;
-
-				if (!e.shiftKey && document.activeElement === lastElement) {
-					e.preventDefault();
-					firstElement.focus();
-				} else if (e.shiftKey && document.activeElement === firstElement) {
-					e.preventDefault();
-					lastElement.focus();
-				}
-			}
-		};
-
-		document.addEventListener("keydown", handleKeyDown);
+		document.addEventListener("keydown", (e) => handleKeyDown(e, menuRef));
 
 		return () => {
-			document.removeEventListener("keydown", handleKeyDown);
+			document.removeEventListener("keydown", (e) => handleKeyDown(e, menuRef));
 		};
 	}, []);
 
@@ -57,4 +33,28 @@ export default function BurgerMenu() {
 			<MobileMenu isOpen={isOpen} onTabPress={() => handleToggle(false)} />
 		</div>
 	);
+}
+
+function handleKeyDown(e: KeyboardEvent, menuRef: RefObject<HTMLElement>) {
+	if (e.key === "Tab") {
+		const focusableElements = menuRef.current?.querySelectorAll(
+			"a, button, input, textarea, select"
+		);
+
+		if (!focusableElements) return;
+		if (focusableElements.length < 2) return;
+
+		const firstElement = focusableElements[0] as HTMLElement;
+		const lastElement = focusableElements[
+			focusableElements.length - 1
+		] as HTMLElement;
+
+		if (!e.shiftKey && document.activeElement === lastElement) {
+			e.preventDefault();
+			firstElement.focus();
+		} else if (e.shiftKey && document.activeElement === firstElement) {
+			e.preventDefault();
+			lastElement.focus();
+		}
+	}
 }

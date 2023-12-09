@@ -8,57 +8,45 @@
 }
 
 :root {
-	--foreground-rgb: 255, 255, 255;
-	--background-start-rgb: 19, 26, 37;
-	--background-end-rgb: 0, 0, 0;
+	--text-primary: rgb(39, 55, 77);
+	--text-secondary: rgba(39, 55, 77, 0.9);
 
-	--primary: theme(colors.teal.300);
-	--teal-900: theme(colors.teal.900);
-	--text-primary: theme(colors.slate.200);
+	--primary-background: rgb(207, 219, 226);
+	--secondary-background: rgb(196, 215, 225);
+	--menu-background: rgb(157, 178, 191);
 
-	--gray-400: theme(colors.gray.400);
-	--gray-900: theme(colors.gray.900);
+	--btn-primary-color: var(--text-primary);
+	--btn-primary-background: theme(colors.teal.900);
+	--btn-info: rgb(230, 127, 132);
 
-	--blue: rgba(30, 41, 59, 1);
+	--text-shadow: rgba(73, 73, 73, 0.3);
+	--bs-primary: rgba(73, 73, 73, 0.3);
 
-	--bg-color: #1a191d;
-	--text-shadow: rgba(0, 0, 0, 0.3);
-	--bg-card: #201f23;
+	--screen-sm: 640px;
+	--screen-md: 768px;
+	--screen-lg: 1024px;
+	--screen-xl: 1280px;
 
 	--text-lg: theme(fontSize.xl);
 	--text-xl: 30rem;
 	--text-2xl: 40rem;
 
-	--hum-menu-h: 3px;
-	--hum-menu-w: 28px;
+	--primary-transition: all 0.3s linear 0.1s;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 19, 26, 37;
-		--background-end-rgb: 0, 0, 0;
+[data-theme="dark"] {
+	--text-primary: theme(colors.slate.200);
+	--text-secondary: theme(colors.gray.400);
 
-		--primary: theme(colors.teal.300);
-		--teal-900: theme(colors.teal.900);
-		--text-primary: theme(colors.slate.200);
+	--primary-background: rgb(26, 25, 29);
+	--secondary-background: rgb(32, 31, 35);
+	--menu-background: rgba(30, 41, 59, 1);
 
-		--gray-400: theme(colors.gray.400);
-		--gray-900: theme(colors.gray.900);
+	--text-shadow: rgba(0, 0, 0, 0.3);
+	--bs-primary: rgb(19, 19, 19);
 
-		--blue: rgba(30, 41, 59, 1);
-
-		--bg-color: #1a191d;
-		--text-shadow: rgba(0, 0, 0, 0.3);
-		--bg-card: #201f23;
-
-		--text-lg: theme(fontSize.xl);
-		--text-xl: 30rem;
-		--text-2xl: 40rem;
-
-		--hum-menu-h: 3px;
-		--hum-menu-w: 28px;
-	}
+	--btn-primary-color: theme(colors.teal.300);
+	--btn-primary-background: theme(colors.teal.900);
 }
 
 * {
@@ -72,23 +60,21 @@ html {
 }
 
 body {
-	color: rgb(226 232 240);
-	background-color: var(--bg-color);
+	color: var(--text-primary);
+	background-color: var(--primary-background);
 	letter-spacing: -1px;
 }
 
 h1 {
-	font-size: clamp(3.75rem, 10vw, 6rem);
+	font-size: clamp(3rem, 6vw, 4.5rem);
 	font-weight: 700;
 	text-shadow: 1px 3px 11px var(--text-shadow);
-	text-align: center;
 	color: var(--text-primary);
 }
 
 h2 {
 	font-size: clamp(1.25rem, 5vw, 1.5rem);
 	text-shadow: 1px 3px 11px var(--text-shadow);
-	text-align: center;
 	word-spacing: 10px;
 	line-height: 2rem;
 	color: var(--text-primary);
@@ -110,5 +96,5 @@ h4 {
 
 p {
 	font-size: 1.125rem;
-	color: var(--gray-400);
+	color: var(--text-secondary);
 }

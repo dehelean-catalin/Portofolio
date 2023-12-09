@@ -2,28 +2,38 @@
 	display: inline;
 	align-items: center;
 	overflow: hidden;
+	transition: var(--primary-transition);
 }
 .link svg {
 	display: inline;
-	transition: all 0.3s;
+
+	transform: translate(0px, 0px);
+	transition: var(--primary-transition);
+}
+.link path {
+	stroke: var(--text-primary);
+	transition: var(--primary-transition);
 }
 
 .link:hover,
 .link:focus-visible {
-	color: var(--primary);
+	color: var(--btn-primary-color);
+	transition: var(--primary-transition);
 }
 
 .link:hover path,
 .link:focus-visible path {
-	stroke: var(--primary);
+	stroke: var(--btn-primary-color);
+	transition: var(--primary-transition);
 }
 
 .link:hover svg,
 .link:focus-visible svg {
 	transform: translate(2px, -2px);
+	transition: var(--primary-transition);
 }
 
 .link:focus-visible {
-	outline: 2px solid var(--primary);
+	outline: 2px solid var(--btn-primary-color);
 	outline-offset: 2px;
 }

@@ -3,8 +3,8 @@
 import { EXPERTISE } from "@/app/lib/data";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
+import IconSVG from "./IconSVG";
 import styles from "./expertise.module.css";
 
 export default function Expertise() {
@@ -23,7 +23,7 @@ export default function Expertise() {
 				{EXPERTISE.map((item, key) => (
 					<article key={key} className={`${styles.card} sm:w-full lg:w-6/12`}>
 						<div className="flex items-start gap-5">
-							<Image src={item.icon} width="55" height="55" alt="" />
+							<IconSVG name={item.icon} />
 							<h4>
 								<span
 									className={`${styles[`gradient-${key}`]} ${styles.title}`}

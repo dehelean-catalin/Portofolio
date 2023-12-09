@@ -1,22 +1,24 @@
 "use client";
 
 import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
-import LinkButton from "@/components/LinkButton/LinkButton";
 import LogoSVG from "@/components/NavMenu/LogoSVG";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import { NAV_TABS } from "../../app/lib/data";
 import styles from "./NavMenu.module.css";
+import ThemeSwitch from "./ThemeSwitch/ThemeSwitch";
 
 export default function NavMenu() {
 	const scrollDirection = useScrollDirection();
+	const navMenu = useRef<HTMLElement>(null);
 	const logoRef = useRef<HTMLAnchorElement | null>(null);
 	const inView = useInView(logoRef, { once: true, amount: 0.2 });
+	const changeColor = useSwitchColor(navMenu);
 
-	const navClassName = clsx(styles["nav-menu"], {
+	const navClassName = clsx(styles["nav-menu"], changeColor, {
 		[styles.down]: scrollDirection === "down",
 	});
 
@@ -25,17 +27,12 @@ export default function NavMenu() {
 		"after delay-100": inView,
 	});
 
-	const resumeContainer = clsx("hidden md:block", {
-		"initial-tab": !inView,
-		"after delay-200": inView,
-	});
-
 	return (
 		<header>
 			<a className={styles["skip-content"]} href="#experience">
 				Skip to content
 			</a>
-			<nav className={navClassName}>
+			<nav ref={navMenu} className={navClassName}>
 				<Link
 					ref={logoRef}
 					href="/"
@@ -54,11 +51,37 @@ export default function NavMenu() {
 						</li>
 					))}
 				</ul>
-				<div className={resumeContainer}>
-					<LinkButton href={"/resume.pdf"} content="Resume" />
+				<div className="flex gap-4 items-center">
+					<ThemeSwitch />
+					<BurgerMenu />
 				</div>
-				<BurgerMenu />
 			</nav>
 		</header>
 	);
+}
+
+function useSwitchColor(navMenuRef: RefObject<HTMLElement>) {
+	const THRESHOLD = 300;
+	const [changeColor, setChangeColor] = useState("");
+
+	useEffect(() => {
+		const element = navMenuRef.current?.classList;
+		const className = styles["start-menu"];
+
+		const handleScroll = () => {
+			if (window.scrollY > THRESHOLD && !element?.contains(className)) {
+				setChangeColor(className);
+			} else if (window.scrollY <= THRESHOLD && element?.contains(className)) {
+				setChangeColor("");
+			}
+		};
+
+		document.addEventListener("scroll", handleScroll);
+
+		return () => {
+			document.removeEventListener("scroll", handleScroll);
+		};
+	}, [changeColor]);
+
+	return changeColor;
 }

@@ -1,28 +1,24 @@
-import computer from "@/public/computer.svg";
-import javascript from "@/public/javascript.svg";
-import react from "@/public/react.svg";
-
 export const EXPERTISE = [
 	{
 		title: "Software",
 		subtitle: "Development",
 		description:
-			"Experienced in both functional and OOP, including programming languages such as Javascript, TypeScript and Java.",
-		icon: computer,
+			"Experienced in both functional  and OOP, including programming languages such as Javascript, TypeScript and Java.",
+		icon: "computer",
 	},
 	{
 		title: "Full-Stack Dev",
 		subtitle: "React, Node Js",
 		description:
-			"Over one year of professional experience in building web applications leveraging React, Node JS, Next JS, and Spring.",
-		icon: javascript,
+			"Over 1 year of professional experience in building applications using React, Node JS, Next JS, and Spring.",
+		icon: "javascript",
 	},
 	{
 		title: "Mobile Dev",
 		subtitle: "React Native",
 		description:
-			"Positioned about building cross-platform applications using React Native and Expo.",
-		icon: react,
+			"Passionate about building cross-platform applications using React Native.",
+		icon: "react",
 	},
 ];
 
@@ -38,14 +34,7 @@ export const EXPERIENCES = [
 			"A great experience that helped me improve my knowledge of computer science, browser engines and keep up with the latest updates of programming languages and frameworks",
 		],
 		projects: [],
-		skills: [
-			"Javascript",
-			"TypeScript",
-			"React",
-			"Express Js",
-			"Java",
-			"Spring",
-		],
+		skills: ["Javascript", "TypeScript", "React", "Node Js", "Java", "Spring"],
 	},
 	{
 		title: "Frontend Developer",
@@ -97,9 +86,9 @@ export const PROJECTS = [
 		skills: ["React", "TypeScript", "Express", "Google Cloud", "Deepgram API"],
 	},
 	{
-		name: "Couch AI",
+		name: "Coach AI",
 		description:
-			"CouchAi's mission is to help people achieve their dream physique by providing a personalized fitness journey that can replace a personal trainer. I built this product using React-native and Redux, focusing on offline functionalities and Spring Boot with PostgreSQL on the backend.",
+			"CoachAi's mission is to help people achieve their dream physique by providing a personalized fitness journey that can replace a personal trainer. I built this product using React-native and Redux, focusing on offline functionalities and Spring Boot with PostgreSQL on the backend.",
 		imageURL: "/projects/couch_ai.webp",
 		githubURL: "https://github.com/dehelean-catalin/CouchAi",
 		demoURL: null,
