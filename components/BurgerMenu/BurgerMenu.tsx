@@ -18,19 +18,27 @@ export default function BurgerMenu() {
 		};
 	}, []);
 
+	function handleClick() {
+		handleToggle(!isOpen);
+	}
+
+	function handleTabPressed() {
+		handleToggle(false);
+	}
+
 	return (
 		<div className="md:hidden" ref={menuRef}>
 			<button
 				type="button"
 				title="Menu"
-				onClick={() => handleToggle(!isOpen)}
+				onClick={handleClick}
 				className={clsx({ [styles.close]: isOpen }, styles.menu)}
 			>
-				<div className={clsx(styles["ham-btn"])}>
+				<div className={styles["ham-btn"]}>
 					<div className={styles["ham-btn-inner"]}></div>
 				</div>
 			</button>
-			<MobileMenu isOpen={isOpen} onTabPress={() => handleToggle(false)} />
+			<MobileMenu isOpen={isOpen} onTabPress={handleTabPressed} />
 		</div>
 	);
 }

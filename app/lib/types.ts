@@ -2,7 +2,7 @@ export type Expertise = {
 	title: string;
 	subtitle: string;
 	description: string;
-	icon: "javascript" | "react" | "computer";
+	icon: string;
 };
 
 export type Project = {
