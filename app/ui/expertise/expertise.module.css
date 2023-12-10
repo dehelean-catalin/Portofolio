@@ -105,12 +105,12 @@
 }
 
 .description::before {
-	content: "<ul>";
+	content: "<p>";
 	margin-bottom: 5px;
 }
 
 .description::after {
-	content: "</ul>";
+	content: "</p>";
 	margin-top: 5px;
 }
 
