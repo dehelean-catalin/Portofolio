@@ -1,8 +1,4 @@
-export default function IconSVG({
-	name,
-}: {
-	name: "javascript" | "computer" | "react";
-}) {
+export default function IconSVG({ name }: { name: string }) {
 	switch (name) {
 		case "javascript":
 			return <JavascriptSvg />;
