@@ -1,40 +1,38 @@
 "use client";
 
 import LinkButton from "@/components/LinkButton/LinkButton";
-import clsx from "clsx";
-import { useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import styles from "./home.module.css";
 
 export default function Home() {
 	const ref = useRef(null);
-	const inView = useInView(ref, { once: true });
+	// const inView = useInView(ref, { once: true });
 
-	const titleClassName = clsx(styles.title, {
-		"opacity-0": !inView,
-		"after delay-300": inView,
-	});
+	// const titleClassName = clsx(styles.title, {
+	// 	"opacity-0": !inView,
+	// 	"after delay-300": inView,
+	// });
 
-	const descClassName = clsx({
-		"opacity-0": !inView,
-		"after delay-500": inView,
-	});
+	// const descClassName = clsx({
+	// 	"opacity-0": !inView,
+	// 	"after": inView,
+	// });
 
-	//TODO: check delay for home items
-	//TODO: change color of the burger menu.
+	// TODO: check delay for home items
+	// TODO: change color of the burger menu.
 	// TODO: ADD SOME THREE JS ANIMATIONS, ICON-LINK
 
-	const resumeContainer = clsx("hidden md:block mt-3", {
-		"initial-tab": !inView,
-		"after delay-200": inView,
-	});
+	// const resumeContainer = clsx("hidden md:block mt-3", {
+	// 	"initial-tab": !inView,
+	// 	"after delay-200": inView,
+	// });
 
 	return (
 		<div ref={ref} id="home" className={`${styles["home-wrapper"]} px-5 mb-20`}>
 			<div className={styles.wrapper}>
-				<span className={descClassName}>Software Developer</span>
-				<h1 className={titleClassName}>Dehelean Catalin</h1>
+				<span>Software Developer</span>
+				<h1 className={styles.title}>Dehelean Catalin</h1>
 				<p className={styles.desc}>
 					I'm all about turning lines of code into something awesome. Whether
 					it's crafting beautiful interfaces or building behind-the-scenes

@@ -4,7 +4,6 @@ import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
 import LogoSVG from "@/components/NavMenu/LogoSVG";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import clsx from "clsx";
-import { useInView } from "framer-motion";
 import Link from "next/link";
 import { RefObject, useEffect, useRef, useState } from "react";
 import { NAV_TABS } from "../../app/lib/data";
@@ -15,17 +14,13 @@ export default function NavMenu() {
 	const scrollDirection = useScrollDirection();
 	const navMenu = useRef<HTMLElement>(null);
 	const logoRef = useRef<HTMLAnchorElement | null>(null);
-	const inView = useInView(logoRef, { once: true, amount: 0.2 });
 	const changeColor = useSwitchColor(navMenu);
 
 	const navClassName = clsx(styles["nav-menu"], changeColor, {
 		[styles.down]: scrollDirection === "down",
 	});
 
-	const listClassName = clsx(`${styles.tabs} hidden font-mono md:flex`, {
-		"initial-tab delay-100": !inView,
-		"after delay-100": inView,
-	});
+	const listClassName = `${styles.tabs} hidden font-mono md:flex`;
 
 	return (
 		<header>
@@ -33,12 +28,7 @@ export default function NavMenu() {
 				Skip to content
 			</a>
 			<nav ref={navMenu} className={navClassName}>
-				<Link
-					ref={logoRef}
-					href="/"
-					title="home"
-					className={clsx(styles.logo, { "opacity-0": !inView, after: inView })}
-				>
+				<Link ref={logoRef} href="/" title="home" className={styles.logo}>
 					<LogoSVG />
 				</Link>
 

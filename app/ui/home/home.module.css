@@ -6,7 +6,7 @@
 	display: grid;
 	grid-template-columns: auto auto 1fr 0.7fr;
 	grid-template-rows: 1fr repeat(3, auto) 1fr;
-	gap: 0rem 1rem;
+	gap: 1rem;
 }
 
 .wrapper span {
@@ -38,19 +38,8 @@
 .actions {
 	grid-column: 1/2;
 	grid-row: 4/5;
-
-	margin: 1.5rem 0px;
 }
 
-.social {
-	grid-column: 1/4;
-	grid-row: 5/6;
-	align-self: center;
-
-	display: flex;
-
-	gap: 1rem;
-}
 .container {
 	grid-column: 4/5;
 	grid-row: 1/-1;
@@ -63,7 +52,7 @@
 	border-radius: 50%;
 
 	transform: scale(1);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
 .container:hover {
@@ -90,7 +79,7 @@
 
 	transform: translateY(20px) scale(1.15);
 	transform-origin: 50% bottom;
-	transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 	pointer-events: none;
 }
 
@@ -107,4 +96,39 @@
 
 	cursor: pointer;
 	pointer-events: none;
+}
+
+@media (width < 1024px) {
+	.container {
+		transform: scale(0.75);
+	}
+	.container:hover {
+		transform: scale(0.85);
+	}
+}
+
+@media (width < 768px) {
+	.wrapper {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.wrapper span {
+		margin-top: auto;
+		align-self: flex-start;
+	}
+
+	.actions {
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+
+	.container {
+		transform: scale(0.75);
+	}
+	.container:hover {
+		transform: scale(0.85);
+	}
 }
