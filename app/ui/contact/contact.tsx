@@ -10,10 +10,10 @@ export default function Contact() {
 	const inView = useInView(ref, { once: true, amount: 0.2 });
 
 	return (
-		<div
+		<section
 			ref={ref}
 			id="contact"
-			className={clsx("m-auto flex items-center flex-col mb-48", {
+			className={clsx("flex items-center justify-center flex-col", {
 				initial: !inView,
 				after: inView,
 			})}
@@ -25,6 +25,6 @@ export default function Contact() {
 				will try to get back to you.
 			</p>
 			<LinkButton href="mailto:drcatalin00@gmail.com" content="Contact" />
-		</div>
+		</section>
 	);
 }

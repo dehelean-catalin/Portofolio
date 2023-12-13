@@ -50,6 +50,10 @@
 	transition-delay: 400ms;
 }
 
+section {
+	min-height: 100dvh;
+}
+
 .btn {
 	color: var(--fallback-color);
 	padding: 0.75rem 1.5rem;
