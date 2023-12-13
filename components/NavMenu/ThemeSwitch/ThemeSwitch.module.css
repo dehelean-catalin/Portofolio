@@ -47,17 +47,17 @@
 
 	display: inline-block;
 
-	background-color: var(--secondary-background);
+	background-color: var(--primary-background);
 	border-radius: 50%;
 
 	cursor: pointer;
 	transform: translateX(0px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 
 	z-index: 2;
 }
 
 .btn:checked + .slider {
 	transform: translateX(27px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }

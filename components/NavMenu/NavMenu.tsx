@@ -5,7 +5,7 @@ import LogoSVG from "@/components/NavMenu/LogoSVG";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import clsx from "clsx";
 import Link from "next/link";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { NAV_TABS } from "../../app/lib/data";
 import styles from "./NavMenu.module.css";
 import ThemeSwitch from "./ThemeSwitch/ThemeSwitch";
@@ -14,9 +14,8 @@ export default function NavMenu() {
 	const scrollDirection = useScrollDirection();
 	const navMenu = useRef<HTMLElement>(null);
 	const logoRef = useRef<HTMLAnchorElement | null>(null);
-	const changeColor = useSwitchColor(navMenu);
 
-	const navClassName = clsx(styles["nav-menu"], changeColor, {
+	const navClassName = clsx(styles["nav-menu"], {
 		[styles.down]: scrollDirection === "down",
 	});
 
@@ -24,7 +23,7 @@ export default function NavMenu() {
 
 	return (
 		<header>
-			<a className={styles["skip-content"]} href="#experience">
+			<a className={styles["skip-content"]} href="#home">
 				Skip to content
 			</a>
 			<nav ref={navMenu} className={navClassName}>
@@ -48,30 +47,4 @@ export default function NavMenu() {
 			</nav>
 		</header>
 	);
-}
-
-function useSwitchColor(navMenuRef: RefObject<HTMLElement>) {
-	const THRESHOLD = 300;
-	const [changeColor, setChangeColor] = useState("");
-
-	useEffect(() => {
-		const element = navMenuRef.current?.classList;
-		const className = styles["start-menu"];
-
-		const handleScroll = () => {
-			if (window.scrollY > THRESHOLD && !element?.contains(className)) {
-				setChangeColor(className);
-			} else if (window.scrollY <= THRESHOLD && element?.contains(className)) {
-				setChangeColor("");
-			}
-		};
-
-		document.addEventListener("scroll", handleScroll);
-
-		return () => {
-			document.removeEventListener("scroll", handleScroll);
-		};
-	}, [changeColor]);
-
-	return changeColor;
 }

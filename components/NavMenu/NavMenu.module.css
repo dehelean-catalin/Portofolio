@@ -1,14 +1,19 @@
 .nav-menu {
 	position: fixed;
 	top: 0px;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
 	width: 100%;
 	padding: 1rem 1.75rem;
-	background-color: var(--menu-background);
-	box-shadow: 0px 10px 30px -10px rgb(15, 15, 15);
+
+	background-color: var(--primary-background);
+	box-shadow: var(--menu-box-shadow);
+
 	counter-reset: section;
+
 	transition: all 0.4s;
 	transform: translateY(0px);
 	z-index: 2;
@@ -35,13 +40,13 @@
 	height: 1px;
 	left: -100px;
 	background-color: var(--btn-primary-color);
-	color: var(--menu-background);
+	color: var(--primary-background);
 	overflow: hidden;
 	z-index: 3;
 }
 .skip-content:focus-visible {
 	box-shadow: 4px 4px 0 0 var(--green);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 	left: 0px;
 	width: auto;
 	height: auto;
@@ -54,7 +59,7 @@
 }
 
 .nav-link {
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .nav-link::before {
@@ -73,9 +78,9 @@
 	outline: 2px solid var(--btn-primary-color);
 }
 .tabs li {
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 .tabs:hover li:not(:hover) {
 	opacity: 0.5;
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }

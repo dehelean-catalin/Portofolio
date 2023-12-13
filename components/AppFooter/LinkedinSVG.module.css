@@ -1,0 +1,8 @@
+.linkedin circle {
+	fill: var(--text-primary);
+}
+
+.linkedin path,
+.linkedin rect {
+	stroke: var(--text-primary);
+}

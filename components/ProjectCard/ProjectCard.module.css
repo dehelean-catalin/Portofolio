@@ -2,7 +2,7 @@
 	position: relative;
 
 	transform: translateY(0px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 
 	z-index: 3;
 }
@@ -10,7 +10,7 @@
 .link:hover,
 .link:focus-visible {
 	transform: translateY(-3px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .link:focus-visible {
@@ -19,10 +19,10 @@
 
 .link path {
 	fill: var(--text-primary);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 .link:hover path,
 .link:focus-visible path {
 	fill: var(--btn-primary-color);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }

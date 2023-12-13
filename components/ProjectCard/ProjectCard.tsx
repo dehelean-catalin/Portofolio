@@ -1,12 +1,11 @@
 import { Project } from "@/app/lib/types";
-import Tab from "@/components/Tab/Tab";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import TextLink from "../TextLink/TextLink";
 import GitHubSVG from "../GithubSVG/GithubSVG";
+import TextLink from "../TextLink/TextLink";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({
@@ -50,7 +49,9 @@ export default function ProjectCard({
 			<div className="flex justify-between mt-2 items-end">
 				<div className="flex flex-wrap gap-2">
 					{project.skills.map((skill: string, key: number) => (
-						<Tab key={key} name={skill} />
+						<span className="tab" key={key}>
+							{skill}
+						</span>
 					))}
 				</div>
 				<Link

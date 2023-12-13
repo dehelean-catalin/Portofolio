@@ -16,19 +16,18 @@
 }
 
 :root {
-	--text-primary: rgb(39, 55, 77);
-	--text-secondary: rgba(39, 55, 77, 0.9);
+	--fallback-color: theme(colors.slate.800);
 
-	--primary-background: rgb(207, 219, 226);
-	--secondary-background: rgb(196, 215, 225);
-	--menu-background: rgb(157, 178, 191);
-
-	--btn-primary-color: var(--text-primary);
-	--btn-primary-background: theme(colors.teal.900);
-	--btn-info: rgb(230, 127, 132);
+	--text-primary: theme(colors.slate.800);
+	--text-secondary: theme(colors.slate.600);
+	--primary-background: #f2f2f2;
+	--secondary-background: #adc5d9;
+	--btn-primary-color: #f5c841;
+	--btn-primary-background: #f2d377;
 
 	--text-shadow: rgba(73, 73, 73, 0.3);
-	--bs-primary: rgba(73, 73, 73, 0.3);
+	--bs-primary: var(--text-shadow);
+	--menu-box-shadow: 0px 0px 1px 1px var(--text-shadow);
 
 	--screen-sm: 640px;
 	--screen-md: 768px;
@@ -38,8 +37,10 @@
 	--text-lg: theme(fontSize.xl);
 	--text-xl: 30rem;
 	--text-2xl: 40rem;
+	--font-header: Montserrat, "Open sans", Verdana, sans-serif;
 
-	--primary-transition: all 0.3s linear 0.1s;
+	--transition-primary: all 0.3s linear 0.1s;
+	--transition-secondary: all 0.15s linear 0.1s;
 }
 
 [data-theme="dark"] {
@@ -48,29 +49,13 @@
 
 	--primary-background: rgb(26, 25, 29);
 	--secondary-background: rgb(32, 31, 35);
-	--menu-background: rgba(30, 41, 59, 1);
 
 	--text-shadow: rgba(0, 0, 0, 0.3);
 	--bs-primary: rgb(19, 19, 19);
+	--menu-box-shadow: 0px 0px 3px 0px rgba(165, 165, 165);
 
 	--btn-primary-color: theme(colors.teal.300);
-	--btn-primary-background: theme(colors.teal.900);
-}
-
-[dark-theme="white"] {
-	--text-primary: rgb(39, 55, 77);
-	--text-secondary: rgba(39, 55, 77, 0.9);
-
-	--primary-background: rgb(207, 219, 226);
-	--secondary-background: rgb(196, 215, 225);
-	--menu-background: rgb(157, 178, 191);
-
-	--btn-primary-color: var(--text-primary);
-	--btn-primary-background: theme(colors.teal.900);
-	--btn-info: rgb(230, 127, 132);
-
-	--text-shadow: rgba(73, 73, 73, 0.3);
-	--bs-primary: rgba(73, 73, 73, 0.3);
+	--btn-primary-background: theme(colors.teal.500);
 }
 
 * {
@@ -80,16 +65,24 @@
 }
 
 html {
+	width: 100%;
+	min-height: 100%;
+
 	font-size: 16px;
+
+	overflow: auto;
 	scroll-behavior: smooth;
 }
 
 body {
-	/* letter-spacing: -1px; */
+	width: 100%;
+
 	font-family: "Open sans", Verdana, sans-serif;
 }
 
 #theme-provider {
+	overflow-x: hidden;
+
 	color: var(--text-primary);
 	background-color: var(--primary-background);
 }
@@ -98,21 +91,24 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: Montserrat, "Open sans", Verdana, sans-serif;
-	text-shadow: 1px 3px 11px var(--text-shadow);
+	font-family: var(--font-header);
 	color: var(--text-primary);
+}
+h2 {
+	text-shadow: none;
 }
 
 h1 {
-	font-size: clamp(3rem, 6vw, 4.5rem);
+	font-size: clamp(3rem, 6vw, 4rem);
 	font-weight: 700;
 	line-height: clamp(3.5rem, 6vw, 4.75rem);
 }
 
 h2 {
-	font-size: clamp(1.25rem, 5vw, 1.5rem);
-	word-spacing: 10px;
-	line-height: 2rem;
+	font-size: clamp(2rem, 6vw, 3.5rem);
+	font-weight: 700;
+	line-height: clamp(2rem, 6vw, 3.5rem);
+	color: var(--text-secondary);
 }
 
 h3 {
@@ -124,7 +120,6 @@ h3 {
 h4 {
 	font-size: 1.5rem;
 	line-height: 2rem;
-	color: var(--text-primary);
 }
 
 p,

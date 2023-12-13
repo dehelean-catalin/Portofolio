@@ -1,3 +1,5 @@
+import styles from "./LinkedinSVG.module.css";
+
 const LinkedinSVG = () => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -5,6 +7,7 @@ const LinkedinSVG = () => (
 		height={28}
 		fill="none"
 		viewBox="0 0 192 192"
+		className={styles.linkedin}
 	>
 		<rect
 			width={132}

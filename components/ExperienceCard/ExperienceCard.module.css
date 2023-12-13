@@ -12,7 +12,7 @@
 	font-size: var(--text-lg);
 
 	transform: translateY(0px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 
 	z-index: 3;
 }
@@ -24,16 +24,16 @@
 
 .link path {
 	fill: var(--text-primary);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .link:hover {
 	color: var(--btn-primary-color);
 	transform: translateY(-3px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .link:hover path {
 	fill: var(--btn-primary-color);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }

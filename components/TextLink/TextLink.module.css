@@ -2,35 +2,35 @@
 	display: inline;
 	align-items: center;
 	overflow: hidden;
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 .link svg {
 	display: inline;
 
 	transform: translate(0px, 0px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 .link path {
 	stroke: var(--text-primary);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .link:hover,
 .link:focus-visible {
 	color: var(--btn-primary-color);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .link:hover path,
 .link:focus-visible path {
 	stroke: var(--btn-primary-color);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .link:hover svg,
 .link:focus-visible svg {
 	transform: translate(2px, -2px);
-	transition: var(--primary-transition);
+	transition: var(--transition-primary);
 }
 
 .link:focus-visible {

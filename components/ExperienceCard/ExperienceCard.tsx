@@ -1,7 +1,6 @@
 "use client";
 
 import { Experience } from "@/app/lib/types";
-import Tab from "@/components/Tab/Tab";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
 import Link from "next/link";
@@ -60,7 +59,9 @@ export default function ExperienceCard({
 					</div>
 					<div className="flex flex-wrap gap-2 mt-4">
 						{experience.skills.map((skill, key) => (
-							<Tab key={key} name={skill} />
+							<span className="tab" key={key}>
+								{skill}
+							</span>
 						))}
 					</div>
 				</div>
