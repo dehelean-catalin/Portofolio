@@ -8,8 +8,6 @@ import styles from "./home.module.css";
 export default function Home() {
 	const ref = useRef(null);
 
-	// TODO: ADD SOME THREE JS ANIMATIONS, change expertise page
-
 	return (
 		<div ref={ref} id="home" className={`${styles["home-wrapper"]} px-5 mb-20`}>
 			<div className={styles.wrapper}>

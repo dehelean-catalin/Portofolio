@@ -76,9 +76,11 @@ html {
 }
 
 body {
+	letter-spacing: -1px;
+}
+#theme-provider {
 	color: var(--text-primary);
 	background-color: var(--primary-background);
-	letter-spacing: -1px;
 }
 
 h1 {
