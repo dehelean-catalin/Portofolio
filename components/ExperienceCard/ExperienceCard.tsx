@@ -38,7 +38,7 @@ export default function ExperienceCard({
 						</span>
 					</TextLink>
 
-					<ul className={`${styles.desc} mt-2 text-xl`}>
+					<ul className={`${styles.desc} mt-2`}>
 						{experience.descriptions.map((desc, key) => (
 							<li key={key} className="mt-2 before:text-teal-300">
 								{desc}

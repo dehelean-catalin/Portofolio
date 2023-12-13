@@ -9,7 +9,7 @@
 	gap: 1rem;
 }
 
-.wrapper span {
+.container-inner span {
 	grid-column: 1/4;
 	grid-row: 1/2;
 	align-self: end;
@@ -38,6 +38,8 @@
 .actions {
 	grid-column: 1/2;
 	grid-row: 4/5;
+	width: -moz-fit-content;
+	width: fit-content;
 }
 
 .container {
@@ -98,6 +100,14 @@
 	pointer-events: none;
 }
 
+.card {
+	background-color: var(--text-primary);
+	padding: 0.75rem 1rem;
+	border-radius: 4px;
+	box-shadow: 0px 0px 5px 1px var(--bs-primary);
+	color: rgb(255, 174, 0) !important;
+}
+
 @media (width < 1024px) {
 	.container {
 		transform: scale(0.75);
@@ -119,11 +129,6 @@
 	.wrapper span {
 		margin-top: auto;
 		align-self: flex-start;
-	}
-
-	.actions {
-		width: -moz-fit-content;
-		width: fit-content;
 	}
 
 	.container {

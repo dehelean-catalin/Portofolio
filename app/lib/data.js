@@ -98,7 +98,7 @@ export const PROJECTS = [
 	{
 		name: "Next Dashboard",
 		description:
-			"An introductory Next Js and Tailwind css project to learn basic concepts like automatic routing, server side rendering, prefetching, etc...",
+			"An introductory Next Js and Tailwind css project to learn basic concepts like automatic routing, server side rendering and prefetching.",
 		imageURL: "/projects/next_dashboard.png",
 		githubURL: "https://github.com/dehelean-catalin/NextJs-Dashboard",
 		demoURL: null,

@@ -28,6 +28,7 @@ export default function Home() {
 				/>
 
 				<div className={styles.container}>
+					<span className={styles.card}>Hello</span>
 					<div className={styles["container-inner"]}>
 						<span className={styles.clip}></span>
 						<Image
