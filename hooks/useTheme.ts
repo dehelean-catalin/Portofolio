@@ -21,7 +21,7 @@ export default function useTheme() {
 }
 
 function handleDefaultTheme() {
-	const localTheme = localStorage.getItem("theme") as Theme;
+	const localTheme = localStorage?.getItem("theme") as Theme;
 	const systemTheme = window?.matchMedia("(prefers-color-scheme: dark)").matches
 		? "dark"
 		: "white";
