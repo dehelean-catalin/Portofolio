@@ -1,7 +1,7 @@
 export const EXPERTISE = [
 	{
 		title: "Software",
-		subtitle: "Development",
+		subtitle: "Engineer",
 		description:
 			"Experienced in both functional  and OOP, including programming languages such as Javascript, TypeScript and Java.",
 		icon: "computer",
@@ -10,7 +10,7 @@ export const EXPERTISE = [
 		title: "Full-Stack Dev",
 		subtitle: "React, Node Js",
 		description:
-			"Over 1 year of professional experience in building applications using React, Node JS, Next JS, and Spring.",
+			"Over 2 years of professional experience in building and mantaining applications using React, Node JS, Next JS, and Spring.",
 		icon: "javascript",
 	},
 	{

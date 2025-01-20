@@ -73,7 +73,7 @@ section {
 	transition: var(--transition-primary);
 }
 .btn-primary::after {
-	content: "🡒";
+	content: "→";
 	display: inline-block;
 
 	margin-left: 0.5rem;

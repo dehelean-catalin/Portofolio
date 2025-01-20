@@ -12,8 +12,6 @@ export default function useTheme() {
 		localStorage.setItem("theme", value);
 	}
 
-	useEffect(() => {}, []);
-
 	useEffect(() => {
 		const themeElement = document?.querySelector("#theme-provider");
 		themeElement?.setAttribute("data-theme", theme);
@@ -33,7 +31,8 @@ function handleDefaultTheme() {
 
 	if (localTheme) {
 		return localTheme;
-	} else if (systemTheme) {
+	}
+	if (systemTheme) {
 		return systemTheme;
 	}
 	return "dark";
