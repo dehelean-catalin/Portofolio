@@ -1,16 +1,16 @@
 export const EXPERTISE = [
 	{
-		title: "Software",
-		subtitle: "Engineer",
+		title: "Software Engineer",
+		subtitle: "Java, AWS",
 		description:
-			"Experienced in both functional  and OOP, including programming languages such as Javascript, TypeScript and Java.",
+			"Experienced in data design and real time application architecture.",
 		icon: "computer",
 	},
 	{
 		title: "Full-Stack Dev",
-		subtitle: "React, Node Js",
+		subtitle: "React, Spring Boot",
 		description:
-			"Over 2 years of professional experience in building and mantaining applications using React, Node JS, Next JS, and Spring.",
+			"Over 2 years of professional experience in building and maintaining applications using React, Spring Boot and AWS",
 		icon: "javascript",
 	},
 	{
@@ -26,15 +26,19 @@ export const NAV_TABS = ["expertise", "experience", "projects", "contact"];
 
 export const EXPERIENCES = [
 	{
-		title: "Full-Stack Development Bootcamp",
+		title: "Software Engineer",
 		company: "Betfair",
 		companyURL: "https://www.betfair.ro",
-		period: "Oct 2023 - Feb 2024",
+		period: "Mar 2024 - Current",
 		descriptions: [
-			"A great experience that helped me improve my knowledge of computer science, browser engines and keep up with the latest updates of programming languages and frameworks",
+			"Collaborated with risk and trading teams to develop multiple applications that help traders and managers to identify potential" +
+			"money losses and generate better odds.",
+			"Migrated a project that monitors bets and issues alerts in real time if odds are incorrect or bet selections become too popular and" +
+			"exceed risk thresholds." ,
+			"Built front-end architecture, designed back-end and data workflows that process and group bets in real time."
 		],
 		projects: [],
-		skills: ["Javascript", "TypeScript", "React", "Node Js", "Java", "Spring"],
+		skills: ["Java", "SQL", "Spring Boot", "AWS", "Kafka"],
 	},
 	{
 		title: "Frontend Developer",
@@ -42,34 +46,18 @@ export const EXPERIENCES = [
 		companyURL: "https://www.itperspectives.ro",
 		period: "Aug 2022 - Apr 2023",
 		descriptions: [
-			"Contributed to the frontend team of the Concrete Management platform, a solution facilitating quality verification, ordering, and reporting.",
-			"Refactored core components, aligning them with emerging business requirements.The result: significantly improved code reusability and maintainability.",
-			"Implemented new interfaces with a focus on achieving seamless integration, utilizing React.js and Redux.",
-			"Enhanced frontend team productivity by automating library organization and import processes.",
+			"Contributed to the development of an international SaaS product, that enhance document management processes, saving up to 8 mins per document for over 30 construction companies.",
+			"Collaborated in the development of the desktop version of the app, implementing compatible features for both platforms, using React, TypeScript and Redux.",
+			"Rebuilt the core UI components and fixed technical issues within our UI library, resulting in better code reuse and maintenance."
 		],
 		projects: [{ name: "Sequello", url: "https://sequello.com/en/" }],
 		skills: [
 			"React",
 			"TypeScript",
-			"Javascript",
 			"Redux",
 			"Primefaces",
 			"SCSS",
 		],
-	},
-	{
-		title: "Web Developer Intern",
-		company: "IT Perspectives",
-		companyURL: "https://www.itperspectives.ro",
-		period: "Jun - Aug 2022",
-		descriptions: [
-			"Learned the fundamentals of web development and how to apply them in real projects.",
-			"The final project consisted of a web application for managing the orders of a bookshop.",
-			"I turned the provided layouts into web pages, developed a REST API, and integrated third-party libraries.",
-			"Achieved a record internship completion and initiated collaboration with a Scrum team to develop a Concrete Management Platform.",
-		],
-		projects: [],
-		skills: ["HTML", "CSS", "Javascript", "React", "TypeScript", "Firebase"],
 	},
 ];
 
@@ -94,17 +82,6 @@ export const PROJECTS = [
 		demoURL: null,
 		projectURL: null,
 		skills: ["React Native", "Expo", "TypeScript", "Spring Boot", "PostgreSQL"],
-	},
-	{
-		name: "Next Dashboard",
-		description:
-			"An introductory Next Js and Tailwind css project to learn basic concepts like automatic routing, server side rendering and prefetching.",
-		imageURL: "/projects/next_dashboard.png",
-		githubURL: "https://github.com/dehelean-catalin/NextJs-Dashboard",
-		demoURL: null,
-		projectURL:
-			"https://next-js-dashboard-jm0gcfyem-dehelean-rares-catalins-projects.vercel.app/dashboard",
-		skills: ["Next Js", "Tailwind CSS", "PostgreSQL"],
 	},
 	{
 		name: "Digital Classroom",

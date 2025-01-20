@@ -19,8 +19,8 @@ export default function Home() {
 				<h1 className={styles.title}>Dehelean Catalin</h1>
 				<h2 className={styles.subtitle}>I build user-friendly apps.</h2>
 				<p className={styles.desc}>
-					I&apos;m a seasoned software developer with a specialization in
-					constructing high-performance applications. Don&apos;t hesitate to
+					I&apos;m a Software Engineer with a specialization in
+					constructing high-performance and real-time applications. Don&apos;t hesitate to
 					reach out if you have an exciting project that could benefit from my
 					expertise.
 				</p>
